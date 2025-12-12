@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 const ClientPage = dynamic(() => import('@/components/ClientPage'), {
     ssr: false,
@@ -18,5 +19,9 @@ const ClientPage = dynamic(() => import('@/components/ClientPage'), {
 });
 
 export default function Home() {
-    return <ClientPage />;
+    return (
+        <ErrorBoundary>
+            <ClientPage />
+        </ErrorBoundary>
+    );
 }

@@ -1,18 +1,21 @@
 'use client';
 
+// Robust Polyfill for Vercel/Next.js environment
+// Must be at the very top and execute BEFORE any other imports!
 import { Buffer } from 'buffer';
 
 if (typeof window !== 'undefined') {
-    global.Buffer = global.Buffer || Buffer;
-    window.Buffer = window.Buffer || Buffer;
+    if (typeof (window as any).global === 'undefined') {
+        (window as any).global = window;
+    }
+    if (typeof (window as any).Buffer === 'undefined') {
+        (window as any).Buffer = Buffer;
+    }
 }
 
 import { useState, useEffect } from 'react';
-import { showConnect, openContractCall } from '@stacks/connect';
-import {
-    AnchorMode,
-    PostConditionMode,
-} from '@stacks/transactions';
+// Note: @stacks/connect and @stacks/transactions are dynamically imported
+// inside functions to prevent hoisting issues that would break the polyfill.
 
 export default function ClientPage() {
     const [userAddress, setUserAddress] = useState('');
@@ -22,6 +25,9 @@ export default function ClientPage() {
 
     const handleConnect = async () => {
         if (typeof window === 'undefined') return;
+
+        // Dynamic import to ensure polyfill runs first
+        const { showConnect } = await import('@stacks/connect');
 
         showConnect({
             appDetails: {
@@ -48,6 +54,10 @@ export default function ClientPage() {
         setMessage('');
 
         try {
+            // Dynamic imports for transaction signing
+            const { openContractCall } = await import('@stacks/connect');
+            const { AnchorMode, PostConditionMode } = await import('@stacks/transactions');
+
             await openContractCall({
                 contractAddress: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT',
                 contractName: 'builder-rewards',
