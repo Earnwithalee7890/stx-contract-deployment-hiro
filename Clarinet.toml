@@ -5,10 +5,61 @@ authors = []
 telemetry = false
 cache_dir = '.\.cache'
 requirements = []
-[contracts.builder-rewards]
-path = 'contracts/builder-rewards.clar'
+# [contracts.builder-rewards]
+# path = 'contracts/builder-rewards.clar'
+# clarity_version = 3
+# epoch = 'latest'
+
+[contracts.stx-vault]
+path = 'contracts/stx-vault.clar'
 clarity_version = 3
 epoch = 'latest'
+
+[contracts.token-registry]
+path = 'contracts/token-registry.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.simple-counter]
+path = 'contracts/simple-counter.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.message-board]
+path = 'contracts/message-board.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.voting]
+path = 'contracts/voting.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.nft-minter]
+path = 'contracts/nft-minter.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.escrow]
+path = 'contracts/escrow.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.timelock]
+path = 'contracts/timelock.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.reputation]
+path = 'contracts/reputation.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.multisig]
+path = 'contracts/multisig.clar'
+clarity_version = 3
+epoch = 'latest'
+
 [repl.analysis]
 passes = ['check_checker']
 
