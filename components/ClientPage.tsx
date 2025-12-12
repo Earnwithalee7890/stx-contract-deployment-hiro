@@ -143,11 +143,7 @@ export default function ClientPage() {
                                     <div className="stat-label">Total Check-Ins</div>
                                 </div>
 
-                                <div className="glass-card stat-card">
-                                    <h2>🚀 Deployments</h2>
-                                    <div className="stat-value">11</div>
-                                    <div className="stat-label">System Contracts</div>
-                                </div>
+
 
                                 <div className="glass-card stat-card">
                                     <h2>💰 Rewards</h2>
