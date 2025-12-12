@@ -33,8 +33,8 @@ export default function ClientPage() {
 
         showConnect({
             appDetails: {
-                name: 'STX Daily Check-In',
-                icon: typeof window !== 'undefined' ? window.location.origin + '/logo.png' : '',
+                name: 'STX Builder Hub',
+                icon: 'https://cryptologos.cc/logos/stacks-stx-logo.png',
             },
             onFinish: (data) => {
                 setUserAddress(data.userSession.loadUserData().profile.stxAddress.mainnet);

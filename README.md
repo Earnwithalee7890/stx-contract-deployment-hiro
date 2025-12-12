@@ -38,7 +38,7 @@
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   Open [https://stx-daily-check-in.vercel.app/](https://stx-daily-check-in.vercel.app/) in your browser.
 
 ## 📜 Smart Contracts
 
