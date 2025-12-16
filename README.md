@@ -54,6 +54,74 @@ This project interacts with the Stacks Mainnet.
 - **Clarity** (Smart Contracts)
 - **CSS Modules** (Premium Glassmorphism)
 
+## 🔗 Chainhooks Integration (Week 2)
+
+This project uses **Hiro Chainhooks** to automatically track on-chain contract interactions in real-time, satisfying the **Stacks Builder Challenge Week 2** requirements.
+
+### What We Track
+
+The chainhook monitors three core contract functions on mainnet:
+- **`daily-check-in`** - When users check in and pay fees (5 microSTX)
+- **`claim-daily-reward`** - When users claim rewards (10 microSTX fee)
+- **`record-score`** - When users submit scores (5 microSTX fee)
+
+### How It Works
+
+1. **Chainhook Registration**: A chainhook filter is registered with Hiro's service
+2. **Event Detection**: When a transaction calls our contract, Chainhooks detects it instantly
+3. **Webhook Trigger**: Event data is sent to `/api/chainhook` endpoint
+4. **Event Processing**: Backend logs the activity, tracks fees, and updates statistics
+
+**Contract Monitored**: `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.builder-rewards-v2`  
+**Network**: Mainnet
+
+### Setup Instructions
+
+```bash
+# 1. Install dependencies (already done during npm install)
+npm install
+
+# 2. Configure environment variables
+cp .env.example .env.local
+# Edit .env.local with your webhook URL and secret
+
+# 3. Register chainhook (outputs JSON config)
+npx tsx scripts/register-chainhook.ts
+
+# 4. Visit https://platform.hiro.so/ to register the chainhook
+# Paste the JSON output from step 3
+```
+
+### Monitoring Chainhook Activity
+
+**Check webhook status:**
+```bash
+# Start dev server
+npm run dev
+
+# Visit in browser or curl
+curl http://localhost:3000/api/chainhook
+```
+
+**Test webhook locally:**
+```bash
+curl -X POST http://localhost:3000/api/chainhook \
+  -H "Content-Type: application/json" \
+  -d '{"chain":"stacks","apply":[{"type":"contract_call","method":"daily-check-in","sender":"SP123","tx_id":"0xabc","block_identifier":{"index":12345,"hash":"0xdef"}}]}'
+```
+
+**View live events** (after deployment):
+- Visit `https://your-app.vercel.app/api/chainhook` to see real-time stats
+- Check server logs for detailed event processing
+
+### Week 2 Compliance ✅
+
+This implementation demonstrates:
+- ✅ **Use of Hiro Chainhooks** - Registered chainhook monitoring contract calls
+- ✅ **Users & fees generated** - Tracks real user interactions with fee collection
+- ✅ **GitHub contributions** - All code committed to public repository
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
