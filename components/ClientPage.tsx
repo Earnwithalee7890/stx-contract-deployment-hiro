@@ -205,7 +205,7 @@ export default function ClientPage() {
                                         disabled={loading}
                                         style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)' }}
                                     >
-                                        {loading ? <span className="loading"></span> : '🎁'} Claim Reward (Get 0.1 STX!)
+                                        {loading ? <span className="loading"></span> : '🎁'} Claim 0.1 STX Reward (One-Time Bonus!)
                                     </button>
                                 </div>
                                 {message && (
