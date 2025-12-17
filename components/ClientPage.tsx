@@ -61,7 +61,7 @@ export default function ClientPage() {
             const { AnchorMode, PostConditionMode } = await import('@stacks/transactions');
 
             await openContractCall({
-                contractAddress: 'SP2F506B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT',
+                contractAddress: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT',
                 contractName: 'builder-rewards-v3', // V3 with 0.1 STX fees
                 functionName: 'daily-check-in',
                 functionArgs: [],
@@ -98,7 +98,7 @@ export default function ClientPage() {
             const { AnchorMode, PostConditionMode } = await import('@stacks/transactions');
 
             await openContractCall({
-                contractAddress: 'SP2F506B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT',
+                contractAddress: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT',
                 contractName: 'builder-rewards-v3',
                 functionName: 'claim-daily-reward',
                 functionArgs: [],
