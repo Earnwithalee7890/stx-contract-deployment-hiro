@@ -15,6 +15,7 @@ if (typeof window !== 'undefined') {
 import { useState, useCallback } from 'react';
 import { CheckInFeed } from './CheckInFeed';
 import { ContractDeployer } from './ContractDeployer';
+import { BadgesPage } from './BadgesPage';
 import SocialLinks from './SocialLinks';
 
 /**
@@ -31,7 +32,7 @@ export default function ClientPage() {
     const [network, setNetwork] = useState<'mainnet' | 'testnet'>('mainnet');
 
     /** Current active navigation tab */
-    const [activeTab, setActiveTab] = useState<'dashboard' | 'deploy' | 'activity'>('dashboard');
+    const [activeTab, setActiveTab] = useState<'dashboard' | 'deploy' | 'activity' | 'badges'>('dashboard');
 
     // Dashboard state
     /** Total number of successful check-ins detected locally */
@@ -346,6 +347,13 @@ export default function ClientPage() {
                             >
                                 👀 Activity
                             </button>
+                            <button
+                                className={`btn ${activeTab === 'badges' ? 'btn-primary' : ''}`}
+                                onClick={() => setActiveTab('badges')}
+                                style={{ opacity: activeTab === 'badges' ? 1 : 0.6 }}
+                            >
+                                🏅 Badges
+                            </button>
                         </div>
                     </div>
                 )}
@@ -404,6 +412,8 @@ export default function ClientPage() {
                     {activeTab === 'deploy' && <div className="content-animate"><ContractDeployer /></div>}
 
                     {activeTab === 'activity' && <div className="content-animate"><CheckInFeed /></div>}
+
+                    {activeTab === 'badges' && <div className="content-animate"><BadgesPage /></div>}
                 </>
             )}
 
