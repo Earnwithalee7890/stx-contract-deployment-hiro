@@ -35,7 +35,7 @@ async function deployBadgesContract() {
         const transaction = await makeContractDeploy(txOptions);
 
         console.log('📡 Broadcasting to Stacks mainnet...\n');
-        const broadcastResponse = await broadcastTransaction(transaction, network);
+        const broadcastResponse = await broadcastTransaction(transaction);
 
         console.log('✅ DEPLOYMENT SUCCESSFUL!\n');
         console.log('Transaction ID:', broadcastResponse.txid);
