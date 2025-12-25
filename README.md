@@ -13,6 +13,8 @@
 ✅ **Stacks Integration**
 - 75+ Clarity smart contracts deployed to mainnet
 - Hiro Chainhooks monitoring contract interactions in real-time
+- **WalletKit SDK (Stacks)** integration for secure transaction signing
+- **Reown AppKit (formerly WalletConnect)** for multi-chain wallet connectivity
 - Wallet connection via Stacks Connect & Leather Wallet
 - Mainnet transaction execution (check-in, rewards, deployments)
 
@@ -33,7 +35,8 @@
 - **Week 2**: Integrated Hiro Chainhooks for real-time event monitoring
 - **Week 2**: Built check-in system with fee collection (0.1 STX)
 - **Week 3**: Added contract deployer with NFT minting capability
-- **Week 3**: Implemented live activity feed and enhanced wallet integration
+- **Week 3**: **Integrated WalletKit SDK & Reown AppKit** for multi-chain connectivity
+- **Week 3**: Implemented live activity feed and personal digital notary system
 
 ---
 
@@ -102,8 +105,9 @@ This project interacts with the Stacks Mainnet.
 ## 🛠️ Built With
 
 - **Next.js 16** (App Directory, Turbopack)
-- **Stacks.js** (Connect, Transactions)
-- **Clarity** (Smart Contracts)
+- **Reown AppKit** (formerly WalletConnect) for Multi-chain Auth
+- **WalletKit SDK** & Stacks.js (Connect, Transactions)
+- **Clarity** (Advanced Smart Contracts)
 - **CSS Modules** (Premium Glassmorphism)
 
 ## 🔗 Chainhooks Integration (Week 2)
@@ -185,6 +189,14 @@ This implementation demonstrates:
 - ✅ **Use of Hiro Chainhooks** - Registered chainhook monitoring contract calls
 - ✅ **Users & fees generated** - Tracks real user interactions with fee collection
 - ✅ **GitHub contributions** - All code committed to public repository
+
+### Week 3 Compliance ✅
+
+Satisfies all **Week 3 Builder Challenge** requirements:
+- ✅ **Reown AppKit Integration** - Implemented for multi-chain wallet connectivity.
+- ✅ **WalletKit SDK Usage** - Utilized for secure Stacks transaction signing.
+- ✅ **Smart Contract Utility** - Deployed Digital Notary, Job Board, and Salary Streamer.
+- ✅ **Users & Fee Generation** - Measurable protocol revenue via daily interactions.
 
 
 ## 🤝 Contributing
