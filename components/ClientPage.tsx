@@ -47,7 +47,9 @@ export default function ClientPage() {
         // Satisfies Stacks Builder Challenge Week 3 Requirement
         try {
             const { createAppKit } = await import('@reown/appkit');
-            const { mainnet, testnet } = await import('@reown/appkit/networks');
+            const networks = await import('@reown/appkit/networks') as any;
+            const mainnet = networks.mainnet;
+            const testnet = networks.testnet || networks.sepolia;
 
             // Initialize Reown AppKit for multi-chain support
             const kit = await createAppKit({
