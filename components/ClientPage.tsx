@@ -15,6 +15,7 @@ if (typeof window !== 'undefined') {
 import { useState, useCallback } from 'react';
 import { CheckInFeed } from './CheckInFeed';
 import { ContractDeployer } from './ContractDeployer';
+import { JobBoard } from './JobBoard';
 import SocialLinks from './SocialLinks';
 
 /**
@@ -28,7 +29,7 @@ export default function ClientPage() {
     const [userAddress, setUserAddress] = useState('');
 
     /** Current active navigation tab */
-    const [activeTab, setActiveTab] = useState<'dashboard' | 'deploy' | 'activity'>('dashboard');
+    const [activeTab, setActiveTab] = useState<'dashboard' | 'deploy' | 'activity' | 'jobs'>('dashboard');
 
     // Dashboard state
     /** Total number of successful check-ins detected locally */
@@ -313,6 +314,13 @@ export default function ClientPage() {
                             >
                                 👀 Activity
                             </button>
+                            <button
+                                className={`btn ${activeTab === 'jobs' ? 'btn-primary' : ''}`}
+                                onClick={() => setActiveTab('jobs')}
+                                style={{ opacity: activeTab === 'jobs' ? 1 : 0.6 }}
+                            >
+                                💼 Jobs
+                            </button>
                         </div>
                     </div>
                 )}
@@ -335,6 +343,12 @@ export default function ClientPage() {
                                     <h2>💰 Rewards</h2>
                                     <div className="stat-value">0</div>
                                     <div className="stat-label">STX Claimed</div>
+                                </div>
+
+                                <div className="glass-card stat-card" style={{ borderLeft: '4px solid #3b82f6' }}>
+                                    <h2>⚡ Network Pulse</h2>
+                                    <div className="stat-value">98/100</div>
+                                    <div className="stat-label">Live Builder Score</div>
                                 </div>
                             </div>
 
@@ -371,6 +385,8 @@ export default function ClientPage() {
                     {activeTab === 'deploy' && <div className="content-animate"><ContractDeployer /></div>}
 
                     {activeTab === 'activity' && <div className="content-animate"><CheckInFeed /></div>}
+
+                    {activeTab === 'jobs' && <div className="content-animate"><JobBoard userAddress={userAddress} setMessage={setMessage} /></div>}
                 </>
             )}
 
