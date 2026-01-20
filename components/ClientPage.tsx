@@ -204,24 +204,41 @@ export default function ClientPage() {
                     marginTop: '1rem'
                 }}>
                     <span className="pulse-dot" style={{ width: '6px', height: '6px', background: '#ff4b4b', borderRadius: '50%' }}></span>
-                    Hiro Chainhook: ACTIVE (v3)
+                    Hiro Chainhook: ACTIVE (January Rewards v3)
                 </div>
             </div>
 
             {/* Week 3 Builder Challenge Section */}
             <div className="glass-card" style={{ marginBottom: '2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                    <span style={{
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <span style={{
+                            background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)',
+                            padding: '0.5rem 1rem',
+                            borderRadius: '8px',
+                            fontSize: '0.85rem',
+                            fontWeight: 'bold',
+                            color: 'white',
+                            boxShadow: '0 4px 12px rgba(79, 70, 229, 0.3)'
+                        }}>
+                            🔥 JANUARY BUILDER CHALLENGE
+                        </span>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                            Impact: <strong>100%</strong> | Jan 19 - Jan 31
+                        </div>
+                    </div>
+                    <div style={{
                         background: 'linear-gradient(135deg, #ff4b4b 0%, #ff8c42 100%)',
                         padding: '0.5rem 1rem',
                         borderRadius: '8px',
                         fontSize: '0.85rem',
                         fontWeight: 'bold',
                         color: 'white',
-                        boxShadow: '0 4px 12px rgba(255, 75, 75, 0.3)'
+                        boxShadow: '0 4px 12px rgba(255, 75, 75, 0.3)',
+                        alignSelf: 'flex-start'
                     }}>
                         🏆 STACKS BUILDER WEEK 3
-                    </span>
+                    </div>
                 </div>
 
                 <h2 style={{ marginTop: '1rem', marginBottom: '1rem', fontSize: '1.3rem' }}>🧱 Built on Stacks</h2>
@@ -233,11 +250,11 @@ export default function ClientPage() {
 
                     <h3 style={{ fontSize: '1rem', marginTop: '1.5rem', marginBottom: '0.8rem', color: 'white' }}>✅ What's Built:</h3>
                     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                        <li><strong>75 Clarity Smart Contracts</strong> deployed to Stacks mainnet</li>
+                        <li><strong>100+ Clarity Smart Contracts</strong> deployed to Stacks mainnet</li>
                         <li><strong>Hiro Chainhooks Integration</strong> monitoring builder-rewards-v3 contract in real-time</li>
                         <li><strong>Mainnet Check-In System</strong> with fee collection (0.1 STX)</li>
                         <li><strong>Wallet Connection</strong> using Stacks Connect & Leather Wallet</li>
-                        <li><strong>Contract Deployer Tool</strong> for standard and NFT contracts</li>
+                        <li><strong>January Builder Rewards</strong> impact tracking active</li>
                         <li><strong>Live Activity Feed</strong> tracking on-chain events</li>
                     </ul>
 
