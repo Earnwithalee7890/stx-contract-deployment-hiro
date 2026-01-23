@@ -1,54 +1,25 @@
 {
-  "name": "stacks-builder-challenge-tests",
-  "version": "1.0.0",
-  "description": "Run unit tests on this project.",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "vitest run",
-    "test:report": "vitest run -- --coverage --costs",
-    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm run test:report\""
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@hirosystems/chainhooks-client": "^1.0.0",
-    "@hirosystems/clarinet-sdk": "^3.6.0",
-    "@stacks/connect": "^8.2.3",
-    "@stacks/connect-react": "^23.1.4",
-    "@stacks/network": "^7.2.0",
-    "@stacks/stacks-blockchain-api-types": "^7.14.1",
-    "@stacks/transactions": "^7.3.0",
-    "@stacks/wallet-sdk": "^7.2.0",
-    "@types/node": "^24.4.0",
-    "@vercel/analytics": "^1.6.1",
-    "buffer": "^6.0.3",
-    "chokidar-cli": "^3.0.0",
-    "next": "^16.0.10",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "vitest": "^3.2.4",
-    "vitest-environment-clarinet": "^2.3.0"
-  },
-  "main": "vitest.config.js",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Earnwithalee7890/stx-contract-deployment.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/Earnwithalee7890/stx-contract-deployment/issues"
-  },
-  "homepage": "https://github.com/Earnwithalee7890/stx-contract-deployment#readme",
-  "devDependencies": {
-    "@types/react": "19.2.7",
-    "typescript": "5.9.3"
-  }
+    "name": "stacks-contracts",
+    "version": "1.0.0",
+    "description": "Comprehensive Stacks smart contract collection",
+    "scripts": {
+        "check": "clarinet check",
+        "test": "clarinet test",
+        "deploy:testnet": "./scripts/deploy-all.sh",
+        "check:all": "./scripts/check-all.sh"
+    },
+    "keywords": [
+        "stacks",
+        "clarity",
+        "smart-contracts",
+        "blockchain",
+        "web3"
+    ],
+    "author": "Stacks Developer",
+    "license": "MIT",
+    "devDependencies": {
+        "@stacks/transactions": "^6.0.0",
+        "@stacks/network": "^6.0.0",
+        "vitest": "^0.34.0"
+    }
 }
