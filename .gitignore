@@ -1,20 +1,28 @@
+# Clarinet
+settings/
+.cache/
+costs-reports.txt
 
-**/settings/Mainnet.toml
-**/settings/Testnet.toml
-deployments/**
-.cache/**
-history.txt
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
 
-# Environment variables with secrets - NEVER commit these!
-.env.local
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
 .env
+.env.local
 
-logs
-*.log
-npm-debug.log*
-coverage
-*.info
-costs-reports.json
-node_modules
-
-.next/
+# Build
+dist/
+build/
+*.wasm
