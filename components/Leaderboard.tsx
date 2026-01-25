@@ -61,15 +61,39 @@ export function Leaderboard() {
                     </div>
                 ) : (
                     entries.map((entry) => (
-                        <div key={entry.address} className={`table-row rank-${entry.rank}`}>
-                            <div className="rank">
-                                {entry.rank === 1 ? '🥇' : entry.rank === 2 ? '🥈' : entry.rank === 3 ? '🥉' : `#${entry.rank}`}
+                        <div key={entry.address}
+                            className={`table-row rank-${entry.rank}`}
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: '1fr 3fr 1fr 1fr',
+                                padding: '1rem',
+                                borderBottom: '1px solid rgba(255,255,255,0.05)',
+                                alignItems: 'center',
+                                background: entry.rank % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent',
+                                transition: 'background 0.2s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+                            onMouseLeave={(e) => e.currentTarget.style.background = entry.rank % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}
+                        >
+                            <div className="rank" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+                                {entry.rank === 1 ? '🥇' : entry.rank === 2 ? '🥈' : entry.rank === 3 ? '🥉' : <span style={{ color: '#94a3b8', marginLeft: '0.5rem' }}>#{entry.rank}</span>}
                             </div>
-                            <div className="address">
+                            <div className="address" style={{ fontFamily: 'monospace', color: '#cbd5e1' }}>
                                 {entry.address.slice(0, 6)}...{entry.address.slice(-4)}
+                                <span style={{ marginLeft: '0.5rem', fontSize: '0.8rem', color: '#10b981' }}>▲</span>
                             </div>
-                            <div className="contracts">{entry.contracts}</div>
-                            <div className="score-badge">{entry.score}</div>
+                            <div className="contracts" style={{ textAlign: 'center', fontWeight: '600' }}>{entry.contracts}</div>
+                            <div className="score-badge" style={{
+                                textAlign: 'right',
+                                background: `rgba(${99 + entry.rank * 10}, 102, 241, 0.15)`,
+                                padding: '0.25rem 0.5rem',
+                                borderRadius: '8px',
+                                color: '#a5b4fc',
+                                width: 'fit-content',
+                                justifySelf: 'end'
+                            }}>
+                                {entry.score} XP
+                            </div>
                         </div>
                     ))
                 )}
