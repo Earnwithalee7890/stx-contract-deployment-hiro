@@ -152,29 +152,42 @@ export function ContractDeployer() {
     };
 
     return (
-        <div className="glass-card" style={{ marginTop: '2rem' }}>
+        <div className="glass-card" style={{ marginTop: '2rem', border: '1px solid rgba(16, 185, 129, 0.2)', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
             <h2>🛠️ Contract Deployer</h2>
 
-            <div style={{ display: 'flex', gap: '1rem', margin: '1rem 0' }}>
+            <div style={{ display: 'flex', gap: '1rem', margin: '1.5rem 0', padding: '4px', background: 'rgba(0,0,0,0.2)', borderRadius: '14px', width: 'fit-content' }}>
                 <button
-                    className={`btn ${deployType === 'standard' ? 'btn-primary' : ''}`}
+                    className={`btn`}
                     onClick={() => setDeployType('standard')}
-                    style={{ opacity: deployType === 'standard' ? 1 : 0.6 }}
+                    style={{
+                        background: deployType === 'standard' ? 'rgba(99, 102, 241, 0.2)' : 'transparent',
+                        color: deployType === 'standard' ? '#818cf8' : '#94a3b8',
+                        border: 'none',
+                        boxShadow: 'none',
+                        transition: 'all 0.3s ease'
+                    }}
                 >
                     📜 Standard
                 </button>
                 <button
-                    className={`btn ${deployType === 'nft' ? 'btn-primary' : ''}`}
+                    className={`btn`}
                     onClick={() => setDeployType('nft')}
-                    style={{ opacity: deployType === 'nft' ? 1 : 0.6 }}
+                    style={{
+                        background: deployType === 'nft' ? 'rgba(236, 72, 153, 0.2)' : 'transparent',
+                        color: deployType === 'nft' ? '#f472b6' : '#94a3b8',
+                        border: 'none',
+                        boxShadow: 'none',
+                        transition: 'all 0.3s ease'
+                    }}
                 >
                     🖼️ NFT Collection
                 </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#ccc' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#94a3b8', fontWeight: '500' }}>
                         Contract Name
                     </label>
                     <input
@@ -184,46 +197,48 @@ export function ContractDeployer() {
                         onChange={(e) => setContractName(e.target.value.replace(/\s+/g, '-').toLowerCase())}
                         style={{
                             width: '100%',
-                            padding: '0.8rem',
-                            borderRadius: '8px',
-                            background: 'rgba(255,255,255,0.1)',
-                            border: '1px solid rgba(255,255,255,0.2)',
-                            color: 'white'
+                            padding: '1rem',
+                            borderRadius: '12px',
+                            background: 'rgba(0,0,0,0.2)',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            color: 'white',
+                            fontSize: '1rem',
+                            fontFamily: 'monospace'
                         }}
                     />
                 </div>
 
                 {deployType === 'nft' ? (
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#ccc' }}>Name</label>
+                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#94a3b8' }}>Name</label>
                             <input
                                 placeholder="e.g. Bored Apes"
                                 value={nftName}
                                 onChange={(e) => setNftName(e.target.value)}
                                 className="glass-input"
-                                style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white' }}
+                                style={{ width: '100%', padding: '1rem', borderRadius: '12px', background: 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)', color: 'white' }}
                             />
                         </div>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#ccc' }}>Symbol</label>
+                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#94a3b8' }}>Symbol</label>
                             <input
                                 placeholder="e.g. BAYC"
                                 value={nftSymbol}
                                 onChange={(e) => setNftSymbol(e.target.value)}
                                 className="glass-input"
-                                style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white' }}
+                                style={{ width: '100%', padding: '1rem', borderRadius: '12px', background: 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)', color: 'white' }}
                             />
                         </div>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#ccc' }}>Max Supply</label>
+                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#94a3b8' }}>Max Supply</label>
                             <input
                                 type="number"
                                 placeholder="1000"
                                 value={maxSupply}
                                 onChange={(e) => setMaxSupply(parseInt(e.target.value))}
                                 className="glass-input"
-                                style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white' }}
+                                style={{ width: '100%', padding: '1rem', borderRadius: '12px', background: 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)', color: 'white' }}
                             />
                         </div>
                     </div>
@@ -231,42 +246,56 @@ export function ContractDeployer() {
                     <textarea
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
-                        rows={10}
+                        rows={12}
                         placeholder="Write your Clarity code here..."
                         style={{
                             fontFamily: 'monospace',
-                            padding: '1rem',
-                            background: 'rgba(0,0,0,0.3)',
-                            color: '#0f0',
-                            borderRadius: '8px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            width: '100%'
+                            padding: '1.25rem',
+                            background: '#0f172a',
+                            color: '#a5b4fc',
+                            borderRadius: '12px',
+                            border: '1px solid rgba(99, 102, 241, 0.2)',
+                            width: '100%',
+                            lineHeight: '1.5',
+                            fontSize: '0.9rem'
                         }}
                     />
                 )}
 
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
-                    <button className="btn" onClick={copyToClipboard} style={{ background: 'rgba(255,255,255,0.1)' }}>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <button className="btn" onClick={copyToClipboard} style={{ background: 'rgba(255,255,255,0.05)', fontSize: '0.9rem' }}>
                         📋 Copy Code
                     </button>
-                    <button className="btn" onClick={downloadContract} style={{ background: 'rgba(255,255,255,0.1)' }}>
+                    <button className="btn" onClick={downloadContract} style={{ background: 'rgba(255,255,255,0.05)', fontSize: '0.9rem' }}>
                         ⬇️ Download .clar
                     </button>
                 </div>
 
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem', marginTop: '0.5rem' }}>
-                    <button className="btn btn-primary" onClick={handleDeploy} style={{ width: '100%', padding: '1rem' }}>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', marginTop: '0.5rem' }}>
+                    <button className="btn btn-primary" onClick={handleDeploy} style={{
+                        width: '100%',
+                        padding: '1rem',
+                        fontSize: '1.1rem',
+                        background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                        boxShadow: '0 4px 14px rgba(16, 185, 129, 0.4)'
+                    }}>
                         🚀 Deploy {deployType === 'nft' ? 'NFT Collection' : 'Smart Contract'}
                     </button>
+                    <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.75rem' }}>
+                        Deployment includes a small platform fee (0.05 STX)
+                    </p>
                 </div>
 
                 {status && (
                     <div style={{
                         padding: '1rem',
-                        borderRadius: '8px',
-                        background: status.includes('Error') || status.includes('Cancelled') ? 'rgba(255,0,0,0.2)' : 'rgba(0,255,0,0.1)',
-                        border: '1px solid ' + (status.includes('Error') ? 'rgba(255,0,0,0.3)' : 'rgba(0,255,0,0.2)'),
-                        textAlign: 'center'
+                        borderRadius: '12px',
+                        background: status.includes('Error') || status.includes('Cancelled') ? 'rgba(239, 68, 68, 0.1)' : 'rgba(16, 185, 129, 0.1)',
+                        border: '1px solid ' + (status.includes('Error') ? 'rgba(239, 68, 68, 0.2)' : 'rgba(16, 185, 129, 0.2)'),
+                        color: status.includes('Error') || status.includes('Cancelled') ? '#fca5a5' : '#6ee7b7',
+                        textAlign: 'center',
+                        fontWeight: '500',
+                        animation: 'fadeIn 0.3s ease-out'
                     }}>
                         {status}
                     </div>
