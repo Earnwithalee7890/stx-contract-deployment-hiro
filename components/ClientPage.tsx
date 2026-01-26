@@ -300,6 +300,7 @@ export default function ClientPage() {
 
                 <Footer setActiveTab={handleTabChange} />
             </div>
+            <div className="page-transition-overlay"></div>
         </>
 
     );
