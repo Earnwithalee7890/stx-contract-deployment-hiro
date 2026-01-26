@@ -20,6 +20,9 @@ interface DashboardViewProps {
     handleClaimCheckinRewards: () => void;
 }
 
+/**
+ * Main dashboard view containing stats, leaderboard, and daily actions.
+ */
 export const DashboardView = ({
     userAddress,
     checkInCount,
