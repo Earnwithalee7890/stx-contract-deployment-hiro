@@ -8,7 +8,7 @@ interface FooterProps {
  */
 export const Footer = ({ setActiveTab }: FooterProps) => {
     return (
-        <footer className="main-footer">
+        <footer className="main-footer" style={{ padding: '3rem 0', background: 'rgba(0,0,0,0.2)', backdropFilter: 'blur(10px)' }}>
             <div className="footer-content">
                 <div className="footer-brand-section">
                     <div className="brand">
