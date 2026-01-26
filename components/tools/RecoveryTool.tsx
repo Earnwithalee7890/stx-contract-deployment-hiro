@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ * Recovery tool for executing 80-wallet claim strategy.
+ */
 import { useState, useEffect } from 'react';
 import { useToast } from '@/components/AchievementSystem';
 
