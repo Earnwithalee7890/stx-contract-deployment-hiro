@@ -10,6 +10,9 @@ interface Job {
     employer: string;
 }
 
+/**
+ * Job Board component listing opportunities for Stacks builders.
+ */
 export function JobBoard({ userAddress, setMessage }: { userAddress: string, setMessage: (m: string) => void }) {
     const [jobs, setJobs] = useState<Job[]>([]);
     const [loading, setLoading] = useState(false);
