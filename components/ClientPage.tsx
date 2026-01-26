@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ * Main client-side application entry point.
+ */
 'use client';
 
 // Robust Polyfill for Vercel/Next.js environment
