@@ -38,7 +38,7 @@ export const DashboardView = ({
     return (
         <div className="content-animate">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h1 style={{ fontSize: '2.5rem' }}>STX Builder Hub</h1>
+                <h1 style={{ fontSize: '2.5rem', letterSpacing: '-0.02em', fontWeight: '800' }}>STX Builder Hub</h1>
                 <p style={{ color: 'var(--text-muted)' }}>Check-in daily, deploy contracts, and track activity</p>
                 <div style={{
                     display: 'inline-flex',
