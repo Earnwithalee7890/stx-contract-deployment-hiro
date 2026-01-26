@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ * Main dashboard view module.
+ */
 import { useState } from 'react';
 import { Modal } from '../Modal';
 import { Tooltip } from '../Tooltip';
