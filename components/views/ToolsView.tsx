@@ -5,6 +5,9 @@ interface ToolsViewProps {
     userAddress: string;
 }
 
+/**
+ * Container component for utility tools like RecoveryTool and GasEstimator.
+ */
 export const ToolsView = ({ userAddress }: ToolsViewProps) => {
     return (
         <div className="content-animate">
