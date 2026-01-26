@@ -1,4 +1,8 @@
 
+/**
+ * @packageDocumentation
+ * Footer component with resource links and legal info.
+ */
 interface FooterProps {
     setActiveTab: (tab: string) => void;
 }
