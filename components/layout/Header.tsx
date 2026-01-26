@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ * Header navigation component for the STX Builder Hub.
+ */
 import { useDarkMode } from '@/lib/useDarkMode';
 
 /**
