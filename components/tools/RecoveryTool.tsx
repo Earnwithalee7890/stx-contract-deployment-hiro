@@ -85,7 +85,8 @@ export const RecoveryTool = ({ userAddress }: RecoveryToolProps) => {
                         className="exp-bar-fill"
                         style={{
                             width: `${(claimedCount / 80) * 100}%`,
-                            background: 'linear-gradient(90deg, #ec4899, #8b5cf6)'
+                            background: 'linear-gradient(90deg, #ec4899, #8b5cf6)',
+                            transition: 'width 1s cubic-bezier(0.4, 0, 0.2, 1)'
                         }}
                     ></div>
                 </div>
