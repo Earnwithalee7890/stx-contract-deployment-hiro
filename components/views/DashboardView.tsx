@@ -42,7 +42,7 @@ export const DashboardView = ({
     return (
         <div className="content-animate">
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h1 style={{ fontSize: '2.5rem', letterSpacing: '-0.02em', fontWeight: '800' }}>STX Builder Hub</h1>
+                <h1 style={{ fontSize: '2.5rem', letterSpacing: '-0.02em', fontWeight: '800' }}>Stacks Builder Rewards</h1>
                 <p style={{ color: 'var(--text-muted)' }}>Check-in daily, deploy contracts, and track activity</p>
                 <div style={{
                     display: 'inline-flex',
@@ -57,7 +57,7 @@ export const DashboardView = ({
                     marginTop: '1rem'
                 }}>
                     <span className="pulse-dot" style={{ width: '6px', height: '6px', background: '#ff4b4b', borderRadius: '50%' }}></span>
-                    Hiro Chainhook: ACTIVE (January Rewards v3)
+                    Hiro Chainhook: ACTIVE (January 2026 Rewards)
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ export const DashboardView = ({
                 </div>
 
                 <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="📜 Builder Manifest">
-                    <p>The STX Builder Hub is more than a dashboard. It's a commitment to the Stacks ecosystem.</p>
+                    <p>The Stacks Builder Rewards program is a collaboration to reward developers building the future of Bitcoin on Stacks.</p>
                     <ul style={{ paddingLeft: '1.2rem', marginTop: '1rem' }}>
                         <li><strong>Decentralization:</strong> We prioritize on-chain transparency.</li>
                         <li><strong>Open Source:</strong> All contracts and code are available for inspection.</li>
@@ -138,18 +138,38 @@ export const DashboardView = ({
                     <h3 style={{ fontSize: '1rem', marginTop: '1.5rem', marginBottom: '0.8rem', color: 'var(--text)' }}>✅ What's Built:</h3>
                     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
                         <li>
-                            <strong>100+
-                                <Tooltip text="Clarity is a decidable language for smart contracts on the Stacks blockchain.">
-                                    <span style={{ textDecoration: 'underline dotted', cursor: 'help' }}> Clarity Smart Contracts</span>
+                            <strong>15,300 $STX
+                                <Tooltip text="Total rewards pool for the January 2026 campaign.">
+                                    <span style={{ textDecoration: 'underline dotted', cursor: 'help' }}> Rewards Pool</span>
                                 </Tooltip>
-                            </strong> deployed to Stacks mainnet
+                            </strong> distributed across 3 tiers
                         </li>
-                        <li><strong>Hiro Chainhooks Integration</strong> monitoring builder-rewards-v3 contract in real-time</li>
-                        <li><strong>Mainnet Check-In System</strong> with fee collection (0.1 STX)</li>
-                        <li><strong>Wallet Connection</strong> using Stacks Connect & Leather Wallet</li>
-                        <li><strong>January Builder Rewards</strong> impact tracking active</li>
-                        <li><strong>Live Activity Feed</strong> tracking on-chain events</li>
+                        <li><strong>Activity Tracking:</strong> Jan 19 - Jan 31</li>
+                        <li><strong>Distribution Date:</strong> Feb 3, 2026</li>
+                        <li><strong>Wallet Integration:</strong> Leather, Xverse, Asigna, Fordefi</li>
+                        <li><strong>Live Leaderboard</strong> tracking on-chain and GitHub activity</li>
                     </ul>
+
+                    <h3 style={{ fontSize: '1rem', marginTop: '1.5rem', marginBottom: '0.8rem', color: 'var(--text)' }}>🏆 Reward Tiers:</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '1rem',
+                        marginBottom: '1.5rem'
+                    }}>
+                        <div style={{ background: 'rgba(255, 215, 0, 0.1)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255, 215, 0, 0.3)' }}>
+                            <div style={{ fontWeight: 'bold', color: '#ffd700', marginBottom: '0.3rem' }}>Tier 1: Top 10</div>
+                            <div style={{ fontSize: '0.85rem' }}>Share 50% of the pool equally.</div>
+                        </div>
+                        <div style={{ background: 'rgba(192, 192, 192, 0.1)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(192, 192, 192, 0.3)' }}>
+                            <div style={{ fontWeight: 'bold', color: '#c0c0c0', marginBottom: '0.3rem' }}>Tier 2: Next 15</div>
+                            <div style={{ fontSize: '0.85rem' }}>Share 25% proportionally based on impact.</div>
+                        </div>
+                        <div style={{ background: 'rgba(205, 127, 50, 0.1)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(205, 127, 50, 0.3)' }}>
+                            <div style={{ fontWeight: 'bold', color: '#cd7f32', marginBottom: '0.3rem' }}>Tier 3: Next 25</div>
+                            <div style={{ fontSize: '0.85rem' }}>Share 25% proportionally based on impact.</div>
+                        </div>
+                    </div>
 
                     <h3 style={{ fontSize: '1rem', marginTop: '1.5rem', marginBottom: '0.8rem', color: 'var(--text)' }}>🔗 Proof of Work:</h3>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', marginBottom: '1rem' }}>
