@@ -81,3 +81,5 @@ Tracking high-quality codebase refinements.
 - **Commit 39**: fix(ui): handled undefined token metadata gracefully (Timestamp: 2026-01-31 00:31:21)
 
 - **Commit 40**: perf(contracts): reduced storage costs for token map (Timestamp: 2026-01-31 00:31:21)
+
+- **Commit 41**: feat(contracts): milestone-escrow fund release mechanism (Timestamp: 2026-01-31 00:31:22)
