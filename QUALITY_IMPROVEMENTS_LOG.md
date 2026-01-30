@@ -33,3 +33,5 @@ Tracking high-quality codebase refinements.
 - **Commit 15**: perf(ui): memoize contract calls for badge status (Timestamp: 2026-01-31 00:31:10)
 
 - **Commit 16**: feat(contracts): enable content-tipping with memo support (Timestamp: 2026-01-31 00:31:10)
+
+- **Commit 17**: docs(contracts): document tipping event formatting for indexers (Timestamp: 2026-01-31 00:31:11)
