@@ -35,3 +35,5 @@ Tracking high-quality codebase refinements.
 - **Commit 16**: feat(contracts): enable content-tipping with memo support (Timestamp: 2026-01-31 00:31:10)
 
 - **Commit 17**: docs(contracts): document tipping event formatting for indexers (Timestamp: 2026-01-31 00:31:11)
+
+- **Commit 18**: style(ui): add confetti animation on successful tip (Timestamp: 2026-01-31 00:31:11)
