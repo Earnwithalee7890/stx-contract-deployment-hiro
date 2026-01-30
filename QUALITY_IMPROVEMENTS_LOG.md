@@ -53,3 +53,5 @@ Tracking high-quality codebase refinements.
 - **Commit 25**: perf(indexer): optimize feedback loop for status fetching (Timestamp: 2026-01-31 00:31:14)
 
 - **Commit 26**: feat(contracts): deploy social-graph-registry for identities (Timestamp: 2026-01-31 00:31:15)
+
+- **Commit 27**: docs(contracts): explain social graph architecture (Timestamp: 2026-01-31 00:31:15)
