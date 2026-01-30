@@ -23,3 +23,5 @@ Tracking high-quality codebase refinements.
 - **Commit 10**: test(contracts): verify owner-only minting func for NFTs (Timestamp: 2026-01-31 00:31:07)
 
 - **Commit 11**: feat(contracts): deploy community-badges logic to mainnet simulation (Timestamp: 2026-01-31 00:31:08)
+
+- **Commit 12**: docs(contracts): update deployment guide with new badge addresses (Timestamp: 2026-01-31 00:31:08)
