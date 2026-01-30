@@ -73,3 +73,5 @@ Tracking high-quality codebase refinements.
 - **Commit 35**: test(contracts): scenario test for buy-sell flow (Timestamp: 2026-01-31 00:31:19)
 
 - **Commit 36**: feat(contracts): governance-token SIP-010 compliance check (Timestamp: 2026-01-31 00:31:20)
+
+- **Commit 37**: docs(contracts): tokenomics summary in repo root (Timestamp: 2026-01-31 00:31:20)
