@@ -57,3 +57,5 @@ Tracking high-quality codebase refinements.
 - **Commit 27**: docs(contracts): explain social graph architecture (Timestamp: 2026-01-31 00:31:15)
 
 - **Commit 28**: style(ui): profile card redesign with registry data (Timestamp: 2026-01-31 00:31:16)
+
+- **Commit 29**: fix(contracts): prevent duplicate handle registration (Timestamp: 2026-01-31 00:31:16)
