@@ -49,3 +49,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 22**: refactor: simplify state management in dashboard (Timestamp: 2026-01-31 00:06:48)
 
 - **Commit 23**: docs: document known limitations of beta features (Timestamp: 2026-01-31 00:06:48)
+
+- **Commit 24**: test: ensure UI renders correctly on dark mode (Timestamp: 2026-01-31 00:06:49)
