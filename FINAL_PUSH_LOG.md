@@ -37,3 +37,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 16**: test: validate input parameters for Stacks calls (Timestamp: 2026-01-31 00:06:45)
 
 - **Commit 17**: refactor: extract constant values to config file (Timestamp: 2026-01-31 00:06:45)
+
+- **Commit 18**: chore: prepare repository structure for handoff (Timestamp: 2026-01-31 00:06:46)
