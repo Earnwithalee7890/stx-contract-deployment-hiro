@@ -29,3 +29,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 12**: perf: improve perceived load time for leaderboards (Timestamp: 2026-01-31 00:06:43)
 
 - **Commit 13**: feat: implementing batch reward distribution logic (Timestamp: 2026-01-31 00:06:43)
+
+- **Commit 14**: style: enhance modal transitions (Timestamp: 2026-01-31 00:06:44)
