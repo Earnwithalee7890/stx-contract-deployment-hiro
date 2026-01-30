@@ -41,6 +41,34 @@ clarinet deploy
 
 ## 🎯 Built for Stacks Talent Event
 
+This project is built for the **Stacks Builder Rewards** program, where rewards are based on your **leaderboard position** determined by ecosystem activity.
+
+### 📊 Activity Tracking
+
+**1. Smart Contract Deployment**
+- The activity and impact of smart contracts deployed on Stacks
+- Focus on production-ready, well-tested contracts
+
+**2. Stacks Library Usage**
+- Use of `@stacks/connect` and `@stacks/transactions` in your repos
+- Demonstrates wallet integration and transaction building
+
+**3. GitHub Contributions**
+- Regular commits to public Stacks repositories
+- Pull requests, documentation, and code reviews
+
+### 🚀 How to Get Started
+
+1. **Create Your Bitcoin L2 Wallet** - Connect it on [talent.app](https://talent.app)
+   - Recommended: Leather, Xverse, Asigna, or Fordefi
+
+2. **Connect Your GitHub Profile** - Link it in talent.app settings
+   - Only public repository contributions are tracked
+
+3. **Start Building with Stacks** - Deploy contracts and build dApps!
+
+📖 **[Read Full Documentation →](JANUARY_REWARDS.md)**
+
 ## 🏆 Deployed Contracts (January 2026 Final Push)
 
 Use the [Stacks Builder Rewards Dashboard](https://stx-daily-check-in.vercel.app) to interact with these contracts.
