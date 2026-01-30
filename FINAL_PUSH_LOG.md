@@ -73,3 +73,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 34**: style: standardize icon sizes across app (Timestamp: 2026-01-31 00:06:54)
 
 - **Commit 35**: fix: align text vertically in table rows (Timestamp: 2026-01-31 00:06:54)
+
+- **Commit 36**: refactor: use semantic HTML elements where possible (Timestamp: 2026-01-31 00:06:55)
