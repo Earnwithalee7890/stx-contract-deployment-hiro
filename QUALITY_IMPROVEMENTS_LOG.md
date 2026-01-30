@@ -17,3 +17,5 @@ Tracking high-quality codebase refinements.
 - **Commit 7**: docs(contracts): explain non-transferable token constraints in README (Timestamp: 2026-01-31 00:31:06)
 
 - **Commit 8**: style(ui): add visual indicators for reputation tiers (Timestamp: 2026-01-31 00:31:06)
+
+- **Commit 9**: fix(contracts): strict access control for minting badges (Timestamp: 2026-01-31 00:31:07)
