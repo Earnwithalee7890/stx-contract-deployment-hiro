@@ -25,3 +25,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 10**: fix: resolve potential race condition in check-in logic (Timestamp: 2026-01-31 00:06:42)
 
 - **Commit 11**: chore: update .gitignore to exclude temp files (Timestamp: 2026-01-31 00:06:42)
+
+- **Commit 12**: perf: improve perceived load time for leaderboards (Timestamp: 2026-01-31 00:06:43)
