@@ -75,3 +75,5 @@ Tracking high-quality codebase refinements.
 - **Commit 36**: feat(contracts): governance-token SIP-010 compliance check (Timestamp: 2026-01-31 00:31:20)
 
 - **Commit 37**: docs(contracts): tokenomics summary in repo root (Timestamp: 2026-01-31 00:31:20)
+
+- **Commit 38**: style(ui): token balance display with real-time updates (Timestamp: 2026-01-31 00:31:20)
