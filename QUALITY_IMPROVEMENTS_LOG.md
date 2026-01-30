@@ -43,3 +43,5 @@ Tracking high-quality codebase refinements.
 - **Commit 20**: test(contracts): simulate cross-contract tipping flow (Timestamp: 2026-01-31 00:31:12)
 
 - **Commit 21**: feat(contracts): add status-update-feed for on-chain social (Timestamp: 2026-01-31 00:31:12)
+
+- **Commit 22**: docs(contracts): spec out social graph data structure (Timestamp: 2026-01-31 00:31:13)
