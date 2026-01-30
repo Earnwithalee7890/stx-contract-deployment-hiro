@@ -8,19 +8,156 @@ export interface ContractTemplate {
 
 export const CONTRACT_TEMPLATES: ContractTemplate[] = [
     {
-        id: 'hello-world',
-        name: 'Hello World',
-        description: 'Basic storage contract that stores a welcome message.',
+        id: 'impact-dao-voting',
+        name: 'Impact DAO Voting',
+        description: 'Decentralized voting mechanism for impact proposals.',
         code: `
-;; Contract: Hello World
-(define-data-var message (string-utf8 50) u"Hello Stacks")
+;; impact-dao-voting.clar
+;; Simple voting mechanism for impact proposals
 
-(define-read-only (get-message)
-    (ok (var-get message))
+(define-data-var proposal-count uint u0)
+(define-map proposals uint {title: (string-ascii 50), votes-for: uint, votes-against: uint, status: (string-ascii 10)})
+(define-map votes {proposal-id: uint, voter: principal} bool)
+
+(define-public (create-proposal (title (string-ascii 50)))
+    (let ((proposal-id (+ (var-get proposal-count) u1)))
+        (map-set proposals proposal-id {title: title, votes-for: u0, votes-against: u0, status: "active"})
+        (var-set proposal-count proposal-id)
+        (ok proposal-id)
+    )
 )
 
-(define-public (set-message (new-message (string-utf8 50)))
-    (ok (var-set message new-message))
+(define-public (vote (proposal-id uint) (vote-for bool))
+    (let (
+        (proposal (unwrap! (map-get? proposals proposal-id) (err u404)))
+        (previous-vote (map-get? votes {proposal-id: proposal-id, voter: tx-sender}))
+    )
+        (asserts! (is-none previous-vote) (err u403)) ;; Already voted
+        (if vote-for
+            (map-set proposals proposal-id (merge proposal {votes-for: (+ (get votes-for proposal) u1)}))
+            (map-set proposals proposal-id (merge proposal {votes-against: (+ (get votes-against proposal) u1)}))
+        )
+        (map-set votes {proposal-id: proposal-id, voter: tx-sender} true)
+        (ok true)
+    )
+)
+
+(define-read-only (get-proposal (proposal-id uint))
+    (map-get? proposals proposal-id)
+)
+`
+    },
+    {
+        id: 'builder-reputation-nft',
+        name: 'Builder Reputation NFT',
+        description: 'Soulbound Token (SBT) for builder reputation.',
+        code: `
+;; builder-reputation-nft.clar
+;; Soulbound Token (SBT) for builder reputation
+
+(define-non-fungible-token builder-badge uint)
+(define-data-var last-id uint u0)
+
+(define-public (mint (recipient principal))
+    (let ((token-id (+ (var-get last-id) u1)))
+        (asserts! (is-eq tx-sender (var-get contract-owner)) (err u403))
+        (try! (nft-mint? builder-badge token-id recipient))
+        (var-set last-id token-id)
+        (ok token-id)
+    )
+)
+
+(define-public (transfer (token-id uint) (sender principal) (recipient principal))
+    (err u100) ;; Soulbound: Transfer not allowed
+)
+
+(define-data-var contract-owner principal tx-sender)
+`
+    },
+    {
+        id: 'community-badges',
+        name: 'Community Badges',
+        description: 'Mintable badges for community participation.',
+        code: `
+;; community-badges.clar
+;; Simple badge system
+
+(define-map badges {user: principal, badge-id: uint} bool)
+
+(define-public (award-badge (user principal) (badge-id uint))
+    (begin
+        ;; Only owner/admin logic omitted for brevity in this demo
+        (map-set badges {user: user, badge-id: badge-id} true)
+        (ok true)
+    )
+)
+
+(define-read-only (has-badge (user principal) (badge-id uint))
+    (default-to false (map-get? badges {user: user, badge-id: badge-id}))
+)
+`
+    },
+    {
+        id: 'content-tipping',
+        name: 'Content Tipping',
+        description: 'Direct tipping contract for creators.',
+        code: `
+;; content-tipping.clar
+;; Direct tipping contract
+
+(define-public (tip (recipient principal) (amount uint) (memo (string-ascii 50)))
+    (begin
+        (try! (stx-transfer? amount tx-sender recipient))
+        (print {event: "tip", from: tx-sender, to: recipient, amount: amount, memo: memo})
+        (ok true)
+    )
+)
+`
+    },
+    {
+        id: 'status-update-feed',
+        name: 'Status Update Feed',
+        description: 'On-chain micro-blogging status updates.',
+        code: `
+;; status-update-feed.clar
+;; On-chain microblogging
+
+(define-map statuses principal (string-utf8 280))
+
+(define-public (post-status (text (string-utf8 280)))
+    (begin
+        (map-set statuses tx-sender text)
+        (print {event: "status-update", user: tx-sender, text: text})
+        (ok true)
+    )
+)
+
+(define-read-only (get-status (user principal))
+    (map-get? statuses user)
+)
+`
+    },
+    {
+        id: 'final-event-memorial',
+        name: 'Event Memorial',
+        description: 'Commemorative contract for the finale.',
+        code: `
+;; final-event-memorial.clar
+;; Commemorative contract for Stacks Builder Rewards Jan 2026
+
+(define-constant event-name "Stacks Builder Rewards Jan 2026")
+(define-map participants principal bool)
+
+(define-public (sign-guestbook)
+    (begin
+        (map-set participants tx-sender true)
+        (print {event: "guestbook-signed", user: tx-sender, message: "I was there!"})
+        (ok true)
+    )
+)
+
+(define-read-only (was-here (user principal))
+    (default-to false (map-get? participants user))
 )
 `
     },

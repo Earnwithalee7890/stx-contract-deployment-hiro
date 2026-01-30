@@ -41,7 +41,26 @@ clarinet deploy
 
 ## 🎯 Built for Stacks Talent Event
 
-All contracts are optimized for deployment and tested on Stacks testnet.
+## 🏆 Deployed Contracts (January 2026 Final Push)
+
+Use the [Stacks Builder Rewards Dashboard](https://stx-daily-check-in.vercel.app) to interact with these contracts.
+
+| Contract Name | Deployer | Contract Address |
+| :--- | :--- | :--- |
+| **Builder Reputation NFT** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.builder-reputation-nft` |
+| **Impact DAO Voting** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.impact-dao-voting` |
+| **Community Badges** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.community-badges` |
+| **Content Tipping** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.content-tipping` |
+| **Status Update Feed** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.status-update-feed` |
+| **Social Graph Registry** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.social-graph-registry` |
+| **NFT Marketplace** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.nft-marketplace-v1` |
+| **Governance Token** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.governance-token` |
+| **Lottery Game** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.lottery-game` |
+| **Milestone Escrow** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.milestone-escrow` |
+| **DeFi Swap Basic** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.defi-swap-basic` |
+| **Final Event Memorial** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.final-event-memorial` |
+
+All contracts are optimized for deployment and tested on Stacks mainnet.
 
 ## 📄 License
 

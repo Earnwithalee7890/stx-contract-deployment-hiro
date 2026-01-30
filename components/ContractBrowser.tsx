@@ -5,10 +5,18 @@
  */
 export function ContractBrowser() {
     const featuredContracts = [
-        { name: 'bns-v2', address: 'SP000000000000000000002Q6VF78.bns', description: 'Bitcoin Naming System - Core identity layer for Stacks.' },
-        { name: 'arkadiko-swap-v2-1', address: 'SP2C2WBASTG0RHH7C9NPY4W17SA55C9N8P8B8FGT', description: 'Main decentralized exchange for Stacks assets.' },
-        { name: 'stacking-dao-core-v1', address: 'SP4SZE494VC2K069Q4S5E0GNKK30PBA84A12B16P', description: 'Liquid stacking protocol for STX holders.' },
-        { name: 'alex-vault', address: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA03W9', description: 'Automated Liquidity Exchange (ALEX) core vault.' },
+        { name: 'builder-reputation-nft', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.builder-reputation-nft', description: 'Soulbound Token (SBT) for tracking builder reputation on Stacks.' },
+        { name: 'impact-dao-voting', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.impact-dao-voting', description: 'Decentralized voting mechanism for impact proposals.' },
+        { name: 'community-badges', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.community-badges', description: 'Mintable badges for community participation and events.' },
+        { name: 'content-tipping', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.content-tipping', description: 'Direct peer-to-peer tipping protocol for content creators.' },
+        { name: 'status-update-feed', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.status-update-feed', description: 'On-chain micro-blogging and status updates.' },
+        { name: 'social-graph-registry', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.social-graph-registry', description: 'Mapping user identities to on-chain profiles.' },
+        { name: 'nft-marketplace-v1', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.nft-marketplace-v1', description: 'Marketplace logic for listing and buying NFTs.' },
+        { name: 'governance-token', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.governance-token', description: 'Standard SIP-010 governance token implementation.' },
+        { name: 'lottery-game', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.lottery-game', description: 'Provably fair on-chain lottery game.' },
+        { name: 'milestone-escrow', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.milestone-escrow', description: 'Escrow service with milestone-based fund release.' },
+        { name: 'defi-swap-basic', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.defi-swap-basic', description: 'Educational AMM-style token swap contract.' },
+        { name: 'final-event-memorial', address: 'SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.final-event-memorial', description: 'Commemorative contract for the January 2026 event finale.' },
     ];
 
     return (
