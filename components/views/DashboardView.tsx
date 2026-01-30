@@ -61,6 +61,64 @@ export const DashboardView = ({
                 </div>
             </div>
 
+            {/* Final Call Banner */}
+            <div style={{
+                background: 'linear-gradient(90deg, #ff4b4b 0%, #dc2626 100%)',
+                color: 'white',
+                padding: '1rem',
+                borderRadius: '12px',
+                marginBottom: '2rem',
+                textAlign: 'center',
+                boxShadow: '0 4px 20px rgba(220, 38, 38, 0.4)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+            }}>
+                <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '1.5rem' }}>🚨</span>
+                    <div>
+                        <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>FINAL CALL: Event Ends Tomorrow!</h3>
+                        <p style={{ margin: '0.2rem 0 0', fontSize: '0.9rem', opacity: 0.9 }}>
+                            Ensure your GitHub & Wallet are connected on Talent Protocol to qualify. Distribution: Feb 3.
+                        </p>
+                    </div>
+                    <div style={{
+                        background: 'rgba(0,0,0,0.2)',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '8px',
+                        fontWeight: 'bold',
+                        fontSize: '1.1rem',
+                        border: '1px solid rgba(255,255,255,0.2)'
+                    }}>
+                        ⏳ <span id="countdown">24H Remaining</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Eligibility Checklist */}
+            <div className="glass-card" style={{ marginBottom: '2rem', borderLeft: '4px solid #10b981' }}>
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>✅ Eligibility Checklist</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input type="checkbox" checked={!!userAddress} readOnly style={{ width: '1.2rem', height: '1.2rem', accentColor: '#10b981' }} />
+                        <span>Connect Stacks Wallet</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input type="checkbox" checked={true} readOnly style={{ width: '1.2rem', height: '1.2rem', accentColor: '#10b981' }} />
+                        <span>Connect GitHub (Talent)</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input type="checkbox" checked={checkInCount > 0} readOnly style={{ width: '1.2rem', height: '1.2rem', accentColor: '#10b981' }} />
+                        <span>Active Mainnet Check-in</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <a href="https://talent.app/~/earn/stacks" target="_blank" rel="noreferrer" style={{ fontSize: '0.9rem', color: '#3b82f6', textDecoration: 'underline' }}>
+                            Verify on Talent App ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             {/* Week 3 Builder Challenge Section */}
             <div className="glass-card" style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
