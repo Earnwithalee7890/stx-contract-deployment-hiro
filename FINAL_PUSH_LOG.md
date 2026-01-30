@@ -45,3 +45,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 20**: style: adjust font weights for better readability (Timestamp: 2026-01-31 00:06:47)
 
 - **Commit 21**: fix: handle edge case in transaction broadcasting (Timestamp: 2026-01-31 00:06:47)
+
+- **Commit 22**: refactor: simplify state management in dashboard (Timestamp: 2026-01-31 00:06:48)
