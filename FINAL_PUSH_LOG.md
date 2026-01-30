@@ -77,3 +77,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 36**: refactor: use semantic HTML elements where possible (Timestamp: 2026-01-31 00:06:55)
 
 - **Commit 37**: docs: update changelog with recent fixes (Timestamp: 2026-01-31 00:06:55)
+
+- **Commit 38**: test: check for responsive layout breakages (Timestamp: 2026-01-31 00:06:56)
