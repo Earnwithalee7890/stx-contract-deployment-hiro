@@ -15,3 +15,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 5**: refactor: clean up unused imports in components (Timestamp: 2026-01-31 00:06:39)
 
 - **Commit 6**: test: add unit test placeholder for reward calculation (Timestamp: 2026-01-31 00:06:40)
+
+- **Commit 7**: docs: clarify eligibility criteria in README (Timestamp: 2026-01-31 00:06:40)
