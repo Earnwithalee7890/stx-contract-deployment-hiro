@@ -69,3 +69,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 32**: chore: cleanup console logs (Timestamp: 2026-01-31 00:06:53)
 
 - **Commit 33**: feat: add error boundary for main content area (Timestamp: 2026-01-31 00:06:53)
+
+- **Commit 34**: style: standardize icon sizes across app (Timestamp: 2026-01-31 00:06:54)
