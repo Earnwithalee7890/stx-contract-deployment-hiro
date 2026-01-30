@@ -31,3 +31,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 13**: feat: implementing batch reward distribution logic (Timestamp: 2026-01-31 00:06:43)
 
 - **Commit 14**: style: enhance modal transitions (Timestamp: 2026-01-31 00:06:44)
+
+- **Commit 15**: docs: add comments to clarifying smart contract functions (Timestamp: 2026-01-31 00:06:44)
