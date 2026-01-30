@@ -85,3 +85,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 40**: feat: integrate updated reward tiers into frontend (Timestamp: 2026-01-31 00:06:57)
 
 - **Commit 41**: style: add subtle glow effect to active cards (Timestamp: 2026-01-31 00:06:57)
+
+- **Commit 42**: fix: sanitize user input before display (Timestamp: 2026-01-31 00:06:58)
