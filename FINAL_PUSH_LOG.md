@@ -81,3 +81,5 @@ Tracking final improvements for Stacks Builder Rewards.
 - **Commit 38**: test: check for responsive layout breakages (Timestamp: 2026-01-31 00:06:56)
 
 - **Commit 39**: chore: format code with prettier settings (Timestamp: 2026-01-31 00:06:56)
+
+- **Commit 40**: feat: integrate updated reward tiers into frontend (Timestamp: 2026-01-31 00:06:57)
