@@ -67,7 +67,8 @@ This project is built for the **Stacks Builder Rewards** program, where rewards 
 
 3. **Start Building with Stacks** - Deploy contracts and build dApps!
 
-📖 **[Read Full Documentation →](JANUARY_REWARDS.md)**
+📖 **[Read Full Documentation (February 2026) →](FEBRUARY_REWARDS.md)**
+Previous Challenges: [January 2026](JANUARY_REWARDS.md)
 
 ## 🏆 Deployed Contracts (January 2026 Final Push)
 
