@@ -1,4 +1,6 @@
-# Stacks Builder Rewards: January Challenge 🚀
+# Stacks Builder Rewards: January Challenge 🚀 (Concluded)
+
+> **Note**: This challenge has concluded. See [February Challenge](FEBRUARY_REWARDS.md) for the latest event.
 
 Welcome to the January edition of the Stacks Builder Rewards challenge! This month is all about maximizing your **on-chain impact** and **community contributions**.
 
