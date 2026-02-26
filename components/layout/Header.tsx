@@ -28,7 +28,10 @@ export const Header = ({ activeTab, setActiveTab, userAddress, handleConnect }: 
                         <img src="/logo.png" alt="STX" />
                         <div className="logo-glow"></div>
                     </div>
-                    <span className="brand-name">Stacks <span className="highlight">Builder</span> Rewards</span>
+                    <div className="brand-text-group">
+                        <span className="brand-name">Stacks <span className="highlight">Builder</span> Rewards</span>
+                        <span className="expansion-badge">Hyper-Expansion Phase</span>
+                    </div>
                 </div>
 
                 <nav className="main-nav">
