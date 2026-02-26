@@ -99,8 +99,45 @@ Use the [Stacks Builder Rewards Dashboard](https://stx-daily-check-in.vercel.app
 | **Gurd** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.gurd` |
 | **Time-Google** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.time-google` |
 | **Batch-v221** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.batch-v221` |
-| **Market-v0** | `SP2F500...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.market-v0` |
+| **Market-v0** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.market-v0` |
 | **Governance-v4** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.governance-v4` |
+
+## 🚀 February 27, 2026 - Deployment Phase: Hyper-Expansion
+
+The following contracts are part of the February 27 "Ecosystem Expansion" batch, focusing on Swap, Bridge, and Vault infrastructure.
+
+| Contract Name | Status | Category |
+| :--- | :--- | :--- |
+| **swap-v1** | Pending-Today | Swap |
+| **bridge-out** | Pending-Today | Bridge |
+| **vault-v3** | Pending-Today | Vault |
+| **liquidity-pool-alpha** | Pending-Today | Pool |
+| **stx-staking-v2** | Pending-Today | Staking |
+| **token-bridge-helper** | Pending-Today | Ecosystem |
+| **cross-chain-escrow** | Pending-Today | Bridge |
+| **yield-source-v1** | Pending-Today | DeFi |
+| **governance-executor** | Pending-Today | DAO |
+| **treasury-multi-sig** | Pending-Today | Treasury |
+| **nft-collateral** | Pending-Today | NFT-Fi |
+| **dex-aggregator-mock** | Pending-Today | DEX |
+| **wrapped-btc-v2** | Pending-Today | Coins |
+| **stable-mint-v1** | Pending-Today | Stablecoin |
+| **oracle-price-feed** | Pending-Today | Oracle |
+| **fast-escrow** | Pending-Today | Escrow |
+| **limit-order-mock** | Pending-Today | DEX |
+| **flash-loan-provider** | Pending-Today | DeFi |
+| **borrowing-engine** | Pending-Today | Lending |
+| **liquidity-migrator** | Pending-Today | DEX |
+| **protocol-guard** | Pending-Today | Security |
+| **dao-ballot-v3** | Pending-Today | DAO |
+| **contract-upgrader** | Pending-Today | Infrastructure |
+| **bridge-fee-collector** | Pending-Today | Bridge |
+| **rewards-distributor-v4** | Pending-Today | Rewards |
+| **staking-pool-gamma** | Pending-Today | Pool |
+| **auto-compounder-mock** | Pending-Today | Yield |
+| **vesting-schedule-v5** | Pending-Today | Coins |
+| **community-treasury** | Pending-Today | Social |
+| **ecosystem-index** | Pending-Today | Registry |
 
 All contracts are optimized for deployment and tested on Stacks mainnet.
 
