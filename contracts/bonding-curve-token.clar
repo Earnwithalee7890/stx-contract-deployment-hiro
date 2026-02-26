@@ -7,7 +7,7 @@
 (define-constant err-slippage (err u300))
 (define-constant err-insufficient-funds (err u301))
 
-(define-token bonding-token)
+(define-fungible-token bonding-token)
 (define-data-var reserve-balance uint u0)
 
 ;; Curve parameters
@@ -66,11 +66,12 @@
 (define-public (burn (amount uint) (min-return uint))
     (let
         (
+            (recipient tx-sender)
             (return (get-sell-price amount))
         )
         (asserts! (>= return min-return) err-slippage)
         (try! (ft-burn? bonding-token amount tx-sender))
-        (try! (as-contract (stx-transfer? return tx-sender tx-sender)))
+        (try! (as-contract (stx-transfer? return tx-sender recipient)))
         (var-set reserve-balance (- (var-get reserve-balance) return))
         (ok return)
     )

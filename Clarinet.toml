@@ -273,6 +273,158 @@ path = 'contracts/identity-registry.clar'
 clarity_version = 2
 epoch = '2.5'
 
+# ===== FEBRUARY 27 ECOSYSTEM EXPANSION BATCH (30 CONTRACTS) =====
+
+[contracts.swap-v1]
+path = 'contracts/feb-27-batch/swap-v1.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.bridge-out]
+path = 'contracts/feb-27-batch/bridge-out.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.vault-v3]
+path = 'contracts/feb-27-batch/vault-v3.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.liquidity-pool-alpha]
+path = 'contracts/feb-27-batch/liquidity-pool-alpha.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.stx-staking-v2]
+path = 'contracts/feb-27-batch/stx-staking-v2.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.token-bridge-helper]
+path = 'contracts/feb-27-batch/token-bridge-helper.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.cross-chain-escrow]
+path = 'contracts/feb-27-batch/cross-chain-escrow.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.yield-source-v1]
+path = 'contracts/feb-27-batch/yield-source-v1.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.governance-executor]
+path = 'contracts/feb-27-batch/governance-executor.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.treasury-multi-sig]
+path = 'contracts/feb-27-batch/treasury-multi-sig.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.nft-collateral]
+path = 'contracts/feb-27-batch/nft-collateral.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.dex-aggregator-mock]
+path = 'contracts/feb-27-batch/dex-aggregator-mock.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.wrapped-btc-v2]
+path = 'contracts/feb-27-batch/wrapped-btc-v2.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.stable-mint-v1]
+path = 'contracts/feb-27-batch/stable-mint-v1.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.oracle-price-feed]
+path = 'contracts/feb-27-batch/oracle-price-feed.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.fast-escrow]
+path = 'contracts/feb-27-batch/fast-escrow.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.limit-order-mock]
+path = 'contracts/feb-27-batch/limit-order-mock.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.flash-loan-provider]
+path = 'contracts/feb-27-batch/flash-loan-provider.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.borrowing-engine]
+path = 'contracts/feb-27-batch/borrowing-engine.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.liquidity-migrator]
+path = 'contracts/feb-27-batch/liquidity-migrator.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.protocol-guard]
+path = 'contracts/feb-27-batch/protocol-guard.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.dao-ballot-v3]
+path = 'contracts/feb-27-batch/dao-ballot-v3.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.contract-upgrader]
+path = 'contracts/feb-27-batch/contract-upgrader.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.bridge-fee-collector]
+path = 'contracts/feb-27-batch/bridge-fee-collector.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.rewards-distributor-v4]
+path = 'contracts/feb-27-batch/rewards-distributor-v4.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.staking-pool-gamma]
+path = 'contracts/feb-27-batch/staking-pool-gamma.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.auto-compounder-mock]
+path = 'contracts/feb-27-batch/auto-compounder-mock.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.vesting-schedule-v5]
+path = 'contracts/feb-27-batch/vesting-schedule-v5.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.community-treasury]
+path = 'contracts/feb-27-batch/community-treasury.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.ecosystem-index]
+path = 'contracts/feb-27-batch/ecosystem-index.clar'
+clarity_version = 2
+epoch = '2.5'
+
 [repl.analysis]
 passes = ['check_checker']
 

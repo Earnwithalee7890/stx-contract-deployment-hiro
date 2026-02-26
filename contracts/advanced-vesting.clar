@@ -80,7 +80,8 @@
             (claimable (get-claimable-amount tx-sender))
         )
         (asserts! (> claimable u0) err-insufficient-balance)
-        (try! (as-contract (stx-transfer? claimable tx-sender (get beneficiary-addr tx-sender this)))) ;; Fix: tx-sender is beneficiary
+        (let ((beneficiary tx-sender))
+            (try! (as-contract (stx-transfer? claimable tx-sender beneficiary))))
         (map-set vesting-schedules tx-sender (merge schedule { vested-amount: (+ (get vested-amount schedule) claimable) }))
         (ok claimable)
     )

@@ -1,9 +1,9 @@
-
-;; nft-marketplace-v2.clar
-;; A standard non-custodial NFT marketplace
-;; Clarity 4
-
-(use-trait nft-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)
+(define-trait nft-trait
+    (
+        (get-owner (uint) (response (optional principal) uint))
+        (transfer (uint principal principal) (response bool uint))
+    )
+)
 
 (define-constant err-not-owner (err u700))
 (define-constant err-price-zero (err u701))
