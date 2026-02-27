@@ -141,6 +141,45 @@ The following contracts are part of the February 27 "Ecosystem Expansion" batch,
 
 All contracts are optimized for deployment and tested on Stacks mainnet.
 
+## 🚀 February 28, 2026 - Deployment Phase: Ecosystem Dominance
+
+The following 30 contracts are part of the February 28 "Ecosystem Expansion" batch, extending the infrastructure for Swaps, Bridges, and automated Yield strategies.
+
+| Contract Name | Status | Category |
+| :--- | :--- | :--- |
+| **swap-router** | Pending-Today | Swap |
+| **swap-v2** | Pending-Today | Swap |
+| **swap-helper** | Pending-Today | Swap |
+| **bridge-in** | Pending-Today | Bridge |
+| **bridge-validator** | Pending-Today | Bridge |
+| **bridge-registry** | Pending-Today | Bridge |
+| **pool-beta** | Pending-Today | Pool |
+| **pool-gamma** | Pending-Today | Pool |
+| **pool-manager** | Pending-Today | Pool |
+| **yield-vault** | Pending-Today | Yield |
+| **yield-optimizer** | Pending-Today | Yield |
+| **yield-strategy** | Pending-Today | Yield |
+| **governance-token** | Pending-Today | Governance |
+| **governance-staking** | Pending-Today | Governance |
+| **governance-voting** | Pending-Today | Governance |
+| **nft-collection** | Pending-Today | NFT |
+| **nft-auction** | Pending-Today | NFT |
+| **nft-royalties** | Pending-Today | NFT |
+| **stablecoin-core** | Pending-Today | Stablecoin |
+| **stablecoin-collateral** | Pending-Today | Stablecoin |
+| **stablecoin-oracle** | Pending-Today | Stablecoin |
+| **dex-pair** | Pending-Today | DEX |
+| **dex-factory** | Pending-Today | DEX |
+| **dex-fees** | Pending-Today | DEX |
+| **escrow-v2** | Pending-Today | Escrow |
+| **escrow-service** | Pending-Today | Escrow |
+| **escrow-arbiter** | Pending-Today | Escrow |
+| **protocol-config** | Pending-Today | Protocol |
+| **protocol-analytics** | Pending-Today | Protocol |
+| **protocol-dashboard** | Pending-Today | Protocol |
+
+All contracts are optimized for deployment and tested on Stacks mainnet.
+
 ## 📄 License
 
 MIT License - Free to use and modify
