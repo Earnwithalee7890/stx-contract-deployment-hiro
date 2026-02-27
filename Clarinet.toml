@@ -425,6 +425,158 @@ path = 'contracts/feb-27-batch/ecosystem-index.clar'
 clarity_version = 2
 epoch = '2.5'
 
+# ===== FEBRUARY 28 ECOSYSTEM EXPANSION BATCH (30 CONTRACTS) =====
+
+[contracts.swap-router]
+path = 'contracts/feb-28-batch/swap-router.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.swap-v2]
+path = 'contracts/feb-28-batch/swap-v2.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.swap-helper]
+path = 'contracts/feb-28-batch/swap-helper.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.bridge-in]
+path = 'contracts/feb-28-batch/bridge-in.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.bridge-validator]
+path = 'contracts/feb-28-batch/bridge-validator.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.bridge-registry]
+path = 'contracts/feb-28-batch/bridge-registry.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.pool-beta]
+path = 'contracts/feb-28-batch/pool-beta.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.pool-gamma]
+path = 'contracts/feb-28-batch/pool-gamma.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.pool-manager]
+path = 'contracts/feb-28-batch/pool-manager.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.yield-vault]
+path = 'contracts/feb-28-batch/yield-vault.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.yield-optimizer]
+path = 'contracts/feb-28-batch/yield-optimizer.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.yield-strategy]
+path = 'contracts/feb-28-batch/yield-strategy.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.governance-token]
+path = 'contracts/feb-28-batch/governance-token.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.governance-staking]
+path = 'contracts/feb-28-batch/governance-staking.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.governance-voting]
+path = 'contracts/feb-28-batch/governance-voting.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.nft-collection]
+path = 'contracts/feb-28-batch/nft-collection.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.nft-auction]
+path = 'contracts/feb-28-batch/nft-auction.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.nft-royalties]
+path = 'contracts/feb-28-batch/nft-royalties.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.stablecoin-core]
+path = 'contracts/feb-28-batch/stablecoin-core.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.stablecoin-collateral]
+path = 'contracts/feb-28-batch/stablecoin-collateral.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.stablecoin-oracle]
+path = 'contracts/feb-28-batch/stablecoin-oracle.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.dex-pair]
+path = 'contracts/feb-28-batch/dex-pair.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.dex-factory]
+path = 'contracts/feb-28-batch/dex-factory.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.dex-fees]
+path = 'contracts/feb-28-batch/dex-fees.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.escrow-v2]
+path = 'contracts/feb-28-batch/escrow-v2.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.escrow-service]
+path = 'contracts/feb-28-batch/escrow-service.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.escrow-arbiter]
+path = 'contracts/feb-28-batch/escrow-arbiter.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.protocol-config]
+path = 'contracts/feb-28-batch/protocol-config.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.protocol-analytics]
+path = 'contracts/feb-28-batch/protocol-analytics.clar'
+clarity_version = 2
+epoch = '2.5'
+
+[contracts.protocol-dashboard]
+path = 'contracts/feb-28-batch/protocol-dashboard.clar'
+clarity_version = 2
+epoch = '2.5'
+
 [repl.analysis]
 passes = ['check_checker']
 
