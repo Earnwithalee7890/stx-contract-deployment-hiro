@@ -1,9 +1,11 @@
 {
-  "name": "stacks-builder-challenge-tests",
+  "name": "stacks-builder-challenge-contracts",
   "version": "1.0.0",
-  "description": "Run unit tests on this project.",
+  "description": "Smart contracts and UI for Stacks Builder Challenge.",
   "type": "module",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
