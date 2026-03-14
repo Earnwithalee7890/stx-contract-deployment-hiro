@@ -7,7 +7,23 @@ A comprehensive collection of Clarity smart contracts for the Stacks blockchain 
 - **simple-contracts/** - 20 production-ready simple contracts
 - **10-contracts/** - Advanced DeFi and governance contracts
 - **28-contracts/** - Extended contract suite
-- **1-21-2026/** - Latest contract implementations (67 contracts)
+- **stacks-builder-challenge/** - Comprehensive Next.js Dashboard
+- **stx-daily-check-in-hiro/** - Daily engagement application
+
+## 🛠️ Official SDK Integration
+
+This project is now powered by the official **[@earnwithalee/stacksrank-sdk](https://www.npmjs.com/package/@earnwithalee/stacksrank-sdk)**. 
+
+Integrating this SDK across the ecosystem projects demonstrates high-level engineering and infrastructure contribution to the Stacks ecosystem.
+
+```bash
+npm install @earnwithalee/stacksrank-sdk
+```
+
+Used for:
+- **Wallet Connection**: Powered by `sdk.wallet.connectWallet()`
+- **Real-time Stats**: Fetching balances and contract data via `sdk.api`
+- **Encoding**: Fast Clarity value encoding for contract calls
 
 ## 🚀 Quick Start
 

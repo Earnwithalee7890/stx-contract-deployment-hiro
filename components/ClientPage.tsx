@@ -117,25 +117,37 @@ export default function ClientPage() {
     const handleConnect = useCallback(async () => {
         if (typeof window === 'undefined') return;
 
-        // Dynamic import to ensure polyfill runs first
-        const { showConnect } = await import('@stacks/connect');
+        try {
+            // Using our own StacksRank SDK for the connection boost! 🚀
+            const sdk = (await import('@earnwithalee/stacksrank-sdk')).default;
+            const addr = await sdk.wallet.connectWallet();
+            
+            setUserAddress(addr);
+            setMessage('✅ Wallet connected via StacksRank SDK!');
+            addToast('SDK Connected!', 'You are now using the @earnwithalee/stacksrank-sdk.', 'achievement');
+        } catch (error) {
+            console.error('SDK Connection error, falling back:', error);
+            
+            // Fallback to standard connect if SDK fails
+            const { showConnect } = await import('@stacks/connect');
 
-        showConnect({
-            appDetails: {
-                name: 'STX Builder Hub',
-                icon: '/logo.png',
-            },
-            onFinish: (data) => {
-                const addr = data.userSession.loadUserData().profile.stxAddress.mainnet;
-                setUserAddress(addr);
-                setMessage('✅ Wallet connected!');
-                addToast('New Milestone!', 'Builder Portfolio Connected successfully.', 'achievement');
-            },
-            onCancel: () => {
-                setMessage('❌ Connection cancelled');
-            },
-        });
-    }, []);
+            showConnect({
+                appDetails: {
+                    name: 'STX Builder Hub',
+                    icon: '/logo.png',
+                },
+                onFinish: (data) => {
+                    const addr = data.userSession.loadUserData().profile.stxAddress.mainnet;
+                    setUserAddress(addr);
+                    setMessage('✅ Wallet connected!');
+                    addToast('New Milestone!', 'Builder Portfolio Connected successfully.', 'achievement');
+                },
+                onCancel: () => {
+                    setMessage('❌ Connection cancelled');
+                },
+            });
+        }
+    }, [addToast]);
 
     const handleCheckIn = async () => {
         if (!userAddress) {

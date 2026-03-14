@@ -5,6 +5,7 @@
 import { RecoveryTool } from '../tools/RecoveryTool';
 import { GasEstimator } from '../GasEstimator';
 import { StacksDashboard } from '../tools/StacksDashboard';
+import { StacksRankShowcase } from '../tools/StacksRankShowcase';
 
 interface ToolsViewProps {
     userAddress: string;
@@ -21,6 +22,7 @@ export const ToolsView = ({ userAddress }: ToolsViewProps) => {
             </h2>
 
             <div style={{ display: 'grid', gap: '2rem' }}>
+                <StacksRankShowcase userAddress={userAddress} />
                 <StacksDashboard userAddress={userAddress} />
                 <GasEstimator />
                 <RecoveryTool userAddress={userAddress} />
