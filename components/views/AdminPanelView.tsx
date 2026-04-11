@@ -93,6 +93,24 @@ export const AdminPanelView = ({ userAddress }: AdminPanelViewProps) => {
                     </div>
                 </div>
 
+                <div className="glass-card" style={{ padding: '1.5rem', marginBottom: '2rem', border: '1px solid var(--stacks-primary)' }}>
+                    <h3 style={{ margin: '0 0 1rem 0' }}>📈 April Event Metrics</h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                        <div>
+                            <div className="stat-label">Participants</div>
+                            <div className="stat-value" style={{ fontSize: '1.5rem' }}>1,248</div>
+                        </div>
+                        <div>
+                            <div className="stat-label">Total Impact</div>
+                            <div className="stat-value" style={{ fontSize: '1.5rem' }}>45.2k</div>
+                        </div>
+                        <div>
+                            <div className="stat-label">Avg Score</div>
+                            <div className="stat-value" style={{ fontSize: '1.5rem' }}>36.2</div>
+                        </div>
+                    </div>
+                </div>
+
                 <h3>Available Actions</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
                     <button
