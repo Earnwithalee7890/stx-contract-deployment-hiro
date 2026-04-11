@@ -1,5 +1,6 @@
 ;; Reputation System Contract
 ;; Track user reputation scores
+;; Optimized for Clarity 2.1
 
 ;; Fee constant
 (define-constant endorsement-fee u5) ;; 5 microSTX to prevent spam
@@ -38,11 +39,24 @@
 
 (define-public (add-reputation (user principal) (points uint))
   (begin
+    (asserts! (is-eq tx-sender (var-get contract-owner)) err-owner-only)
     (match (map-get? reputation user)
       rep (map-set reputation user (merge rep {score: (+ (get score rep) points)}))
       (map-set reputation user {score: points, endorsements: u0})
     )
     (ok true)
+  )
+)
+
+(define-public (decay-reputation (user principal))
+  (begin
+    (asserts! (is-eq tx-sender (var-get contract-owner)) err-owner-only)
+    (match (map-get? reputation user)
+      rep (let ((new-score (/ (* (get score rep) u90) u100))) ;; 10% decay
+        (map-set reputation user (merge rep {score: new-score}))
+        (ok true))
+      (err u404)
+    )
   )
 )
 
