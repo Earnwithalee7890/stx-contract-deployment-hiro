@@ -1800,4 +1800,7 @@ input:checked+.slider:before {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-}
+}/* Custom Talent Event Theme */
+:root { --stacks-primary: #5546FF; --stacks-secondary: #00DBDE; }
+.talent-card { @apply bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:scale-[1.01]; }
+.glow-text { text-shadow: 0 0 10px rgba(85, 70, 255, 0.5); }
