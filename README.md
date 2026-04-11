@@ -55,144 +55,44 @@ clarinet deploy
 - Staking Pools
 - Time-locked Savings
 
-## 🎯 Built for Stacks Talent Event
+## 🎯 Built for Stacks Talent Event (April 2026 Update)
 
-This project is built for the **Stacks Builder Rewards** program, where rewards are based on your **leaderboard position** determined by ecosystem activity.
+This project is built for the **Stacks Builder Rewards** program, where rewards are based on your **leaderboard position** determined by ecosystem activity. The April 2026 event focuses on **Advanced Bitcoin Narrative** and **Deep Clarity Integration**.
 
 ### 📊 Activity Tracking
 
 **1. Smart Contract Deployment**
 - The activity and impact of smart contracts deployed on Stacks
-- Focus on production-ready, well-tested contracts
+- Focus on production-ready, well-tested contracts (Clarity 2+)
 
 **2. Stacks Library Usage**
-- Use of `@stacks/connect` and `@stacks/transactions` in your repos
+- Use of `@stacks/connect`, `@stacks/transactions`, and `@earnwithalee/stacksrank-sdk`
 - Demonstrates wallet integration and transaction building
 
 **3. GitHub Contributions**
-- Regular commits to public Stacks repositories
-- Pull requests, documentation, and code reviews
+- Regular commits to public Stacks repositories (like this one!)
+- Quality over quantity: meaningful code, documentation, and tests
 
 ### 🚀 How to Get Started
 
 1. **Create Your Bitcoin L2 Wallet** - Connect it on [talent.app](https://talent.app)
-   - Recommended: Leather, Xverse, Asigna, or Fordefi
-
 2. **Connect Your GitHub Profile** - Link it in talent.app settings
-   - Only public repository contributions are tracked
-
 3. **Start Building with Stacks** - Deploy contracts and build dApps!
 
-📖 **[Read Full Documentation (February 2026) →](FEBRUARY_REWARDS.md)**
-Previous Challenges: [January 2026](JANUARY_REWARDS.md)
+📖 **[Read April 2026 Documentation →](APRIL_Ecosystem_Update.md)**
 
-## 🏆 Deployed Contracts (January 2026 Final Push)
+## 🚀 April 12, 2026 - Deployment Phase: Ultimate Integration
 
-Use the [Stacks Builder Rewards Dashboard](https://stx-daily-check-in.vercel.app) to interact with these contracts.
-
-| Contract Name | Deployer | Contract Address |
-| :--- | :--- | :--- |
-| **Builder Reputation NFT** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.builder-reputation-nft` |
-| **Impact DAO Voting** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.impact-dao-voting` |
-| **Community Badges** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.community-badges` |
-| **Content Tipping** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.content-tipping` |
-| **Status Update Feed** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.status-update-feed` |
-| **Social Graph Registry** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.social-graph-registry` |
-| **NFT Marketplace** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.nft-marketplace-v1` |
-| **Governance Token** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.governance-token` |
-| **Lottery Game** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.lottery-game` |
-| **Milestone Escrow** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.milestone-escrow` |
-| **DeFi Swap Basic** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.defi-swap-basic` |
-| **Final Event Memorial** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.final-event-memorial` |
-| **Splitter-1** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.splitter-1` |
-| **Notificationss** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.notificationss` |
-| **NFT-Main** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.nft-main` |
-| **Messageww** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.messageww` |
-| **Math-v22** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.math-v22` |
-| **Lottery-Machine** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.lottery-machine` |
-| **Lock-Machince** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.lock-machince` |
-| **Batch-Leading** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.batch-leading` |
-| **Gurd** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.gurd` |
-| **Time-Google** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.time-google` |
-| **Batch-v221** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.batch-v221` |
-| **Market-v0** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.market-v0` |
-| **Governance-v4** | `SP2F50...` | `SP2F500B8DTRK1EANJQ054BRAB8DDKN6QCMXGNFBT.governance-v4` |
-
-## 🚀 February 27, 2026 - Deployment Phase: Hyper-Expansion
-
-The following contracts are part of the February 27 "Ecosystem Expansion" batch, focusing on Swap, Bridge, and Vault infrastructure.
+The following contracts are part of the April 2026 "Ultimate Integration" batch, focusing on Bitcoin-native functionality and advanced reputation systems.
 
 | Contract Name | Status | Category |
 | :--- | :--- | :--- |
-| **swap-v1** | Pending-Today | Swap |
-| **bridge-out** | Pending-Today | Bridge |
-| **vault-v3** | Pending-Today | Vault |
-| **liquidity-pool-alpha** | Pending-Today | Pool |
-| **stx-staking-v2** | Pending-Today | Staking |
-| **token-bridge-helper** | Pending-Today | Ecosystem |
-| **cross-chain-escrow** | Pending-Today | Bridge |
-| **yield-source-v1** | Pending-Today | DeFi |
-| **governance-executor** | Pending-Today | DAO |
-| **treasury-multi-sig** | Pending-Today | Treasury |
-| **nft-collateral** | Pending-Today | NFT-Fi |
-| **dex-aggregator-mock** | Pending-Today | DEX |
-| **wrapped-btc-v2** | Pending-Today | Coins |
-| **stable-mint-v1** | Pending-Today | Stablecoin |
-| **oracle-price-feed** | Pending-Today | Oracle |
-| **fast-escrow** | Pending-Today | Escrow |
-| **limit-order-mock** | Pending-Today | DEX |
-| **flash-loan-provider** | Pending-Today | DeFi |
-| **borrowing-engine** | Pending-Today | Lending |
-| **liquidity-migrator** | Pending-Today | DEX |
-| **protocol-guard** | Pending-Today | Security |
-| **dao-ballot-v3** | Pending-Today | DAO |
-| **contract-upgrader** | Pending-Today | Infrastructure |
-| **bridge-fee-collector** | Pending-Today | Bridge |
-| **rewards-distributor-v4** | Pending-Today | Rewards |
-| **staking-pool-gamma** | Pending-Today | Pool |
-| **auto-compounder-mock** | Pending-Today | Yield |
-| **vesting-schedule-v5** | Pending-Today | Coins |
-| **community-treasury** | Pending-Today | Social |
-| **ecosystem-index** | Pending-Today | Registry |
-
-All contracts are optimized for deployment and tested on Stacks mainnet.
-
-## 🚀 February 28, 2026 - Deployment Phase: Ecosystem Dominance
-
-The following 30 contracts are part of the February 28 "Ecosystem Expansion" batch, extending the infrastructure for Swaps, Bridges, and automated Yield strategies.
-
-| Contract Name | Status | Category |
-| :--- | :--- | :--- |
-| **swap-router** | Pending-Today | Swap |
-| **swap-v2** | Pending-Today | Swap |
-| **swap-helper** | Pending-Today | Swap |
-| **bridge-in** | Pending-Today | Bridge |
-| **bridge-validator** | Pending-Today | Bridge |
-| **bridge-registry** | Pending-Today | Bridge |
-| **pool-beta** | Pending-Today | Pool |
-| **pool-gamma** | Pending-Today | Pool |
-| **pool-manager** | Pending-Today | Pool |
-| **yield-vault** | Pending-Today | Yield |
-| **yield-optimizer** | Pending-Today | Yield |
-| **yield-strategy** | Pending-Today | Yield |
-| **governance-token** | Pending-Today | Governance |
-| **governance-staking** | Pending-Today | Governance |
-| **governance-voting** | Pending-Today | Governance |
-| **nft-collection** | Pending-Today | NFT |
-| **nft-auction** | Pending-Today | NFT |
-| **nft-royalties** | Pending-Today | NFT |
-| **stablecoin-core** | Pending-Today | Stablecoin |
-| **stablecoin-collateral** | Pending-Today | Stablecoin |
-| **stablecoin-oracle** | Pending-Today | Stablecoin |
-| **dex-pair** | Pending-Today | DEX |
-| **dex-factory** | Pending-Today | DEX |
-| **dex-fees** | Pending-Today | DEX |
-| **escrow-v2** | Pending-Today | Escrow |
-| **escrow-service** | Pending-Today | Escrow |
-| **escrow-arbiter** | Pending-Today | Escrow |
-| **protocol-config** | Pending-Today | Protocol |
-| **protocol-analytics** | Pending-Today | Protocol |
-| **protocol-dashboard** | Pending-Today | Protocol |
+| **talent-event-registry** | Pending | Event |
+| **impact-rewards** | Pending | Analytics |
+| **event-milestone-tracker**| Pending | Tracking |
+| **stacks-rank-helper** | Pending | Ranking |
+| **reputation-v2** | Pending | Reputation |
+| **community-voting-v3** | Pending | Governance |
 
 All contracts are optimized for deployment and tested on Stacks mainnet.
 
