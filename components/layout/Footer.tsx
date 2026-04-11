@@ -44,6 +44,7 @@ export const Footer = ({ setActiveTab }: FooterProps) => {
                         <a href="https://docs.hiro.so" target="_blank" rel="noopener noreferrer">Hiro Docs</a>
                         <a href="https://stacks.org" target="_blank" rel="noopener noreferrer">Stacks Foundation</a>
                         <a href="https://explorer.hiro.so" target="_blank" rel="noopener noreferrer">Explorer</a>
+                        <a href="APRIL_Ecosystem_Update.md" style={{ color: 'var(--stacks-primary)' }}>April 2026 Event</a>
                     </div>
                 </div>
 
