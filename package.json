@@ -1,6 +1,6 @@
 {
   "name": "stacks-builder-challenge-contracts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Smart contracts and UI for Stacks Builder Challenge.",
   "type": "module",
   "publishConfig": {
