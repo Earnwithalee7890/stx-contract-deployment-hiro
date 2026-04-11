@@ -6,6 +6,7 @@
 (define-constant contract-owner tx-sender)
 (define-constant err-owner-only (err u100))
 (define-constant err-invalid-day (err u101))
+(define-constant err-already-checked-in (err u102))
 
 (define-constant daily-fee u50000) ;; 0.05 STX
 
@@ -26,26 +27,25 @@
       (caller tx-sender)
       (today (/ stacks-block-height u144))
       (user-days (default-to (list) (map-get? daily-activities caller)))
+      (stats (default-to { total-days: u0, last-check-in: u0, fees-paid: u0 } (map-get? user-stats caller)))
     )
+    ;; Prevent double check-in
+    (asserts! (not (is-eq (get last-check-in stats) today)) err-already-checked-in)
+    
     ;; Collect fee
     (try! (stx-transfer? daily-fee caller (as-contract tx-sender)))
     
     ;; Update stats
-    (match (map-get? user-stats caller)
-      stats (map-set user-stats caller {
-        total-days: (+ (get total-days stats) u1),
-        last-check-in: today,
-        fees-paid: (+ (get fees-paid stats) daily-fee)
-      })
-      (begin
-        (map-set user-stats caller {
-          total-days: u1,
-          last-check-in: today,
-          fees-paid: daily-fee
-        })
+    (if (is-eq (get total-days stats) u0)
         (var-set total-users (+ (var-get total-users) u1))
-      )
+        true
     )
+
+    (map-set user-stats caller {
+      total-days: (+ (get total-days stats) u1),
+      last-check-in: today,
+      fees-paid: (+ (get fees-paid stats) daily-fee)
+    })
     
     (var-set total-check-ins (+ (var-get total-check-ins) u1))
     (var-set total-fees (+ (var-get total-fees) daily-fee))
