@@ -29,3 +29,9 @@ build/
 .next/
 *.log
 deployments/
+# Stacks specific
+*.clar.json
+.clarinet/
+contracts/*.json
+coverage/
+test-results/
