@@ -23,12 +23,21 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@earnwithalee'
+
+      - name: Configure package for GitHub Packages
+        run: |
+          # Override package.json name to match GitHub scope
+          node -e "
+            const pkg = require('./package.json');
+            pkg.name = '@earnwithalee7890/stx-contract';
+            pkg.publishConfig = { registry: 'https://npm.pkg.github.com' };
+            require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+          "
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
 
       - name: Publish to GitHub Packages
-        run: npm publish --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
