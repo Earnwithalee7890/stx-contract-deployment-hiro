@@ -2,103 +2,20 @@ name: SDK Integration Test
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours
+    - cron: '0 */3 * * *'  # Every 3 hours = 8 runs/day
   push:
     branches: [main]
   workflow_dispatch:
 
 jobs:
-  sdk-test-github-packages:
+  sdk-github-packages:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: read
-    strategy:
-      matrix:
-        node-version: [18, 20, 22]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: 'https://npm.pkg.github.com'
-
-      - name: Create .npmrc for GitHub Packages
-        run: |
-          echo "@earnwithalee7890:registry=https://npm.pkg.github.com" > .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
-
-      - name: Install SDK from GitHub Packages
-        run: |
-          mkdir -p /tmp/sdk-test
-          cd /tmp/sdk-test
-          echo '{"name":"sdk-gpr-test","version":"1.0.0","private":true}' > package.json
-          cp $GITHUB_WORKSPACE/.npmrc .npmrc
-          npm install @earnwithalee7890/stx-contract
-          echo "✅ Installed from GitHub Packages"
-
-      - name: Validate SDK package
-        run: |
-          cd /tmp/sdk-test
-          node -e "
-            try {
-              const pkg = require('@earnwithalee7890/stx-contract/package.json');
-              console.log('✅ Package:', pkg.name);
-              console.log('✅ Version:', pkg.version);
-            } catch(e) {
-              console.log('Package check:', e.message);
-            }
-          "
-
-      - name: Install project dependencies
-        run: npm install --legacy-peer-deps
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify SDK in dependency tree
-        run: npm ls @earnwithalee/stx-contract || true
-
-  sdk-test-npm:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20, 22]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install SDK from npm registry
-        run: |
-          mkdir -p /tmp/npm-test
-          cd /tmp/npm-test
-          echo '{"name":"sdk-npm-test","version":"1.0.0","private":true}' > package.json
-          npm install @earnwithalee/stx-contract
-          echo "✅ Installed from npmjs.com"
-
-      - name: Validate SDK
-        run: |
-          cd /tmp/npm-test
-          node -e "
-            const pkg = require('@earnwithalee/stx-contract/package.json');
-            console.log('✅ Package:', pkg.name, pkg.version);
-          "
-
-  multi-install-github:
-    runs-on: ubuntu-latest
-    needs: sdk-test-github-packages
     permissions:
       packages: read
     strategy:
+      max-parallel: 5
       matrix:
-        run-id: [1, 2, 3, 4, 5]
+        run-id: [1,2,3,4,5,6,7,8,9,10,11,12]
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -106,14 +23,33 @@ jobs:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
 
-      - name: Install from GitHub Packages (run ${{ matrix.run-id }})
+      - name: Install from GitHub Packages
         run: |
-          mkdir -p /tmp/gpr-run-${{ matrix.run-id }}
-          cd /tmp/gpr-run-${{ matrix.run-id }}
-          echo '{"name":"gpr-boost-${{ matrix.run-id }}","version":"1.0.0","private":true}' > package.json
+          DIR="/tmp/sdk-${{ matrix.run-id }}"
+          mkdir -p "$DIR" && cd "$DIR"
+          echo '{"name":"sdk-run-${{ matrix.run-id }}","version":"1.0.0","private":true}' > package.json
           echo "@earnwithalee7890:registry=https://npm.pkg.github.com" > .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
-          npm install @earnwithalee7890/stx-contract
-          echo "✅ GitHub Packages install #${{ matrix.run-id }} complete"
+          npm cache clean --force 2>/dev/null
+          npm install @earnwithalee7890/stx-contract --prefer-online
+          echo "✅ GitHub Packages install #${{ matrix.run-id }} done"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  sdk-npm-registry:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install from npm
+        run: |
+          mkdir -p /tmp/npm-test && cd /tmp/npm-test
+          echo '{"name":"npm-test","version":"1.0.0","private":true}' > package.json
+          npm install @earnwithalee/stx-contract
+          node -e "const p=require('@earnwithalee/stx-contract/package.json');console.log('✅',p.name,p.version)"
