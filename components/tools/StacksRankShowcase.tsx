@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 // @ts-ignore - The SDK might not have types yet
-import sdk from '@earnwithalee/stacksrank-sdk';
+import sdk from '@earnwithalee/stx-contract';
 
 interface StacksRankShowcaseProps {
     userAddress: string;
@@ -83,7 +83,7 @@ export const StacksRankShowcase = ({ userAddress }: StacksRankShowcaseProps) => 
             
             <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--stx-gold)' }}>
                 <code style={{ fontSize: '0.85rem', color: '#ccc' }}>
-                    // Powered by @earnwithalee/stacksrank-sdk<br/>
+                    // Powered by @earnwithalee/stx-contract<br/>
                     const data = await sdk.api.getBalance(userAddress);
                 </code>
             </div>

@@ -118,13 +118,13 @@ export default function ClientPage() {
         if (typeof window === 'undefined') return;
 
         try {
-            // Using our own StacksRank SDK for the connection boost! 🚀
-            const sdk = (await import('@earnwithalee/stacksrank-sdk')).default;
+            // Using our own STX Contract SDK for the connection boost! 🚀
+            const sdk = (await import('@earnwithalee/stx-contract')).default;
             const addr = await sdk.wallet.connectWallet();
             
             setUserAddress(addr);
-            setMessage('✅ Wallet connected via StacksRank SDK!');
-            addToast('SDK Connected!', 'You are now using the @earnwithalee/stacksrank-sdk.', 'achievement');
+            setMessage('✅ Wallet connected via STX Contract SDK!');
+            addToast('SDK Connected!', 'You are now using the @earnwithalee/stx-contract.', 'achievement');
         } catch (error) {
             console.error('SDK Connection error, falling back:', error);
             

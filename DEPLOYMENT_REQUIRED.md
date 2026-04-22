@@ -25,7 +25,7 @@
   - Updated API query to fetch from `builder-rewards-v2` contract
 
 ### 3. SDK Integration
-- ✅ **New Dependency**: `@earnwithalee/stacksrank-sdk`
+- ✅ **New Dependency**: `@earnwithalee/stx-contract`
 - ✅ **Infrastructure**: Core logic now powered by official ecosystem SDK
 - ✅ **Benefit**: Skyrockets "Impact Score" by using self-built infrastructure toolkit
 

@@ -19,4 +19,4 @@
 ## SDKs
 - [@stacks/transactions](https://www.npmjs.com/package/@stacks/transactions)
 - [@stacks/connect](https://www.npmjs.com/package/@stacks/connect)
-- [@earnwithalee/stacksrank-sdk](https://www.npmjs.com/package/@earnwithalee/stacksrank-sdk)
+- [@earnwithalee/stx-contract](https://www.npmjs.com/package/@earnwithalee/stx-contract)

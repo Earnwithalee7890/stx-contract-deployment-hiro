@@ -12,12 +12,12 @@ A comprehensive collection of Clarity smart contracts for the Stacks blockchain 
 
 ## 🛠️ Official SDK Integration
 
-This project is now powered by the official **[@earnwithalee/stacksrank-sdk](https://www.npmjs.com/package/@earnwithalee/stacksrank-sdk)**. 
+This project is now powered by the official **[@earnwithalee/stx-contract](https://www.npmjs.com/package/@earnwithalee/stx-contract)**. 
 
 Integrating this SDK across the ecosystem projects demonstrates high-level engineering and infrastructure contribution to the Stacks ecosystem.
 
 ```bash
-npm install @earnwithalee/stacksrank-sdk
+npm install @earnwithalee/stx-contract
 ```
 
 Used for:
@@ -66,7 +66,7 @@ This project is built for the **Stacks Builder Rewards** program, where rewards 
 - Focus on production-ready, well-tested contracts (Clarity 2+)
 
 **2. Stacks Library Usage**
-- Use of `@stacks/connect`, `@stacks/transactions`, and `@earnwithalee/stacksrank-sdk`
+- Use of `@stacks/connect`, `@stacks/transactions`, and `@earnwithalee/stx-contract`
 - Demonstrates wallet integration and transaction building
 
 **3. GitHub Contributions**
